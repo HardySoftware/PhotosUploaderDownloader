@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{1F89819A-B832-4D5F-B303-C62EA0987786}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader", "HardySoft.PhotosUploaderDownloader\HardySoft.PhotosUploaderDownloader.csproj", "{D36AE224-3DE7-4169-8B72-B6C8231B2A07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D36AE224-3DE7-4169-8B72-B6C8231B2A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D36AE224-3DE7-4169-8B72-B6C8231B2A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D36AE224-3DE7-4169-8B72-B6C8231B2A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D36AE224-3DE7-4169-8B72-B6C8231B2A07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F91DA26-79D4-4CEE-B613-71FEBF760A54}
+	EndGlobalSection
+EndGlobal
