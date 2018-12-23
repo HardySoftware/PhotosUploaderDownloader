@@ -62,7 +62,7 @@
 
             // Sends an HTTP response to the browser.
             var response = context.Response;
-            string responseString = "<html><head><meta http-equiv='refresh' content='10;url=https://google.com'></head><body>Please return to the app.</body></html>";
+            string responseString = "<html><head></head><body>Please return to the application's window to continue.</body></html>";
             var buffer = Encoding.UTF8.GetBytes(responseString);
             response.ContentLength64 = buffer.Length;
             var responseOutput = response.OutputStream;
