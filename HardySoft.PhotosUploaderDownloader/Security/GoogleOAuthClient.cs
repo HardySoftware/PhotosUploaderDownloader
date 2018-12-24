@@ -15,7 +15,7 @@
     /// <summary>
     /// An OAuth client to authenticate Google services.
     /// </summary>
-    public class OAuthClient
+    internal class GoogleOAuthClient
     {
         /// <summary>
         /// The Google API OAuth Uri.
@@ -31,11 +31,11 @@
         /// Perform OAuth authentication.
         /// </summary>
         /// <returns>The asynchronous operation task.</returns>
-        public async Task PerformAuthentication()
+        public async Task<OAuthToken> PerformAuthentication()
         {
             // Generates state and PKCE values.
-            string state = RandomDataBase64url(32);
-            string codeVerifier = RandomDataBase64url(32);
+            string state = RandomDataBase64Url(32);
+            string codeVerifier = RandomDataBase64Url(32);
             string codeChallenge = Base64UrlEncodeNoPadding(HashWithSha256(codeVerifier));
 
             // Creates a redirect URI using an available port on the loop-back address.
@@ -55,7 +55,7 @@
             string authorizationRequest = $"{AuthorizationEndpoint}?response_type=code&scope={scope}&redirect_uri={Uri.EscapeDataString(redirectUri)}&client_id={Secrets.ClientId}&state={state}&code_challenge={codeChallenge}&code_challenge_method={CodeChallengeMethod}";
 
             // Opens request in the browser.
-            await Task.Run(() => OpenBrowser(authorizationRequest));
+            await Task.Run(() => OpenBrowser(new Uri(authorizationRequest)));
 
             // Waits for the OAuth authorization response.
             var context = await http.GetContextAsync();
@@ -66,7 +66,7 @@
             var buffer = Encoding.UTF8.GetBytes(responseString);
             response.ContentLength64 = buffer.Length;
             var responseOutput = response.OutputStream;
-            Task responseTask = responseOutput.WriteAsync(buffer, 0, buffer.Length).ContinueWith((task) =>
+            await responseOutput.WriteAsync(buffer, 0, buffer.Length).ContinueWith((task) =>
             {
                 responseOutput.Close();
                 http.Stop();
@@ -98,34 +98,36 @@
             Output("Authorization code: " + authorizationCode);
 
             // Starts the code exchange at the Token Endpoint.
-            await PerformCodeExchange(authorizationCode, codeVerifier, redirectUri);
+            return await PerformCodeExchange(authorizationCode, codeVerifier, redirectUri);
         }
 
         /// <summary>
         /// Opens a Url in different platforms.
         /// </summary>
-        /// <param name="url">The Url to open</param>
-        private static void OpenBrowser(string url)
+        /// <param name="uri">The Url to open</param>
+        private static void OpenBrowser(Uri uri)
         {
+            string urlString = uri.AbsoluteUri;
+
             try
             {
-                Process.Start(url);
+                Process.Start(urlString);
             }
             catch
             {
                 // hack because of this: https://github.com/dotnet/corefx/issues/10361
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 {
-                    url = url.Replace("&", "^&");
-                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
+                    urlString = urlString.Replace("&", "^&");
+                    Process.Start(new ProcessStartInfo("cmd", $"/c start {urlString}") { CreateNoWindow = true });
                 }
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                 {
-                    Process.Start("xdg-open", url);
+                    Process.Start("xdg-open", urlString);
                 }
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 {
-                    Process.Start("open", url);
+                    Process.Start("open", urlString);
                 }
                 else
                 {
@@ -140,8 +142,8 @@
         /// <param name="authorizationCode">The authorization code obtained from initial request.</param>
         /// <param name="codeVerifier">The code verifier used during the initial request.</param>
         /// <param name="redirectUri">The redirect (callback) Uri from local host.</param>
-        /// <returns>The asynchronous operation task with user information.</returns>
-        private static async Task<string> PerformCodeExchange(string authorizationCode, string codeVerifier, string redirectUri)
+        /// <returns>The asynchronous operation task with OAuth token.</returns>
+        private static async Task<OAuthToken> PerformCodeExchange(string authorizationCode, string codeVerifier, string redirectUri)
         {
             Output("Exchanging code for tokens...");
 
@@ -166,7 +168,7 @@
             {
                 // gets the response
                 WebResponse tokenResponse = await tokenRequest.GetResponseAsync();
-                using (StreamReader reader = new StreamReader(tokenResponse.GetResponseStream()))
+                using (StreamReader reader = new StreamReader(tokenResponse.GetResponseStream() ?? throw new InvalidOperationException("Failed to get response.")))
                 {
                     // reads response body
                     string responseText = await reader.ReadToEndAsync();
@@ -174,21 +176,24 @@
 
                     // converts to dictionary
                     Dictionary<string, string> tokenEndpointDecoded = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseText);
-                    string access_token = tokenEndpointDecoded["access_token"];
-                    var userInfo = await GetUserInfo(access_token);
 
-                    return userInfo;
+                    var oauthToken = new OAuthToken(
+                        tokenEndpointDecoded["access_token"],
+                        tokenEndpointDecoded["id_token"],
+                        tokenEndpointDecoded["refresh_token"],
+                        Convert.ToInt32(tokenEndpointDecoded["expires_in"]));
+
+                    return oauthToken;
                 }
             }
             catch (WebException ex)
             {
                 if (ex.Status == WebExceptionStatus.ProtocolError)
                 {
-                    var response = ex.Response as HttpWebResponse;
-                    if (response != null)
+                    if (ex.Response is HttpWebResponse response)
                     {
                         Output("HTTP: " + response.StatusCode);
-                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                        using (var reader = new StreamReader(response.GetResponseStream() ?? throw new InvalidOperationException("Failed to get response.")))
                         {
                             // reads response body
                             string responseText = await reader.ReadToEndAsync();
@@ -216,37 +221,6 @@
         }
 
         /// <summary>
-        /// Gets user info by using access token.
-        /// </summary>
-        /// <param name="accesToken">The access token returned from OAuth authentication.</param>
-        /// <returns>The asynchronous operation task with user information.</returns>
-        private static async Task<string> GetUserInfo(string accesToken)
-        {
-            Output("Making API Call to Userinfo...");
-
-            // builds the  request
-            string userInfoRequestUri = "https://www.googleapis.com/oauth2/v3/userinfo";
-
-            // sends the request
-            HttpWebRequest userinfoRequest = (HttpWebRequest)WebRequest.Create(userInfoRequestUri);
-            userinfoRequest.Method = "GET";
-            userinfoRequest.Headers.Add($"Authorization: Bearer {accesToken}");
-            userinfoRequest.ContentType = "application/x-www-form-urlencoded";
-            userinfoRequest.Accept = "Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
-
-            // gets the response
-            WebResponse userinfoResponse = await userinfoRequest.GetResponseAsync();
-            using (StreamReader userinfoResponseReader = new StreamReader(userinfoResponse.GetResponseStream()))
-            {
-                // reads response body
-                string userinfoResponseText = await userinfoResponseReader.ReadToEndAsync();
-
-                Output(userinfoResponseText);
-                return userinfoResponseText;
-            }
-        }
-
-        /// <summary>
         /// Appends the given string to the on-screen log, and the debug console.
         /// </summary>
         /// <param name="output">string to be appended</param>
@@ -260,7 +234,7 @@
         /// </summary>
         /// <param name="length">Input length (nb. output will be longer)</param>
         /// <returns>A URI friendly base64 encoded string.</returns>
-        private static string RandomDataBase64url(uint length)
+        private static string RandomDataBase64Url(uint length)
         {
             RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
 
@@ -274,11 +248,11 @@
         /// <summary>
         /// Returns the SHA256 hash of the input string.
         /// </summary>
-        /// <param name="inputStirng">The string to be hashed.</param>
+        /// <param name="inputString">The string to be hashed.</param>
         /// <returns>The hashed value.</returns>
-        private static byte[] HashWithSha256(string inputStirng)
+        private static byte[] HashWithSha256(string inputString)
         {
-            byte[] bytes = Encoding.ASCII.GetBytes(inputStirng);
+            byte[] bytes = Encoding.ASCII.GetBytes(inputString);
             SHA256Managed sha256 = new SHA256Managed();
             return sha256.ComputeHash(bytes);
         }

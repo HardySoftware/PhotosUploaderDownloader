@@ -2,6 +2,7 @@
 {
     using System;
     using System.Threading.Tasks;
+    using HardySoft.PhotosUploaderDownloader.ApiClient;
     using HardySoft.PhotosUploaderDownloader.Security;
 
     /// <summary>
@@ -17,9 +18,12 @@
         public static async Task Main(string[] args)
         {
             // https://github.com/googlesamples/oauth-apps-for-windows/tree/master/OAuthConsoleApp
-            var auth = new OAuthClient();
-            await auth.PerformAuthentication();
-            Console.WriteLine("Hello World!");
+            var auth = new GoogleOAuthClient();
+            var token = await auth.PerformAuthentication();
+
+            var api = new GoogleApiClient();
+            var albums = await api.GetAlbums(token);
+            Console.WriteLine($"Hello World! {albums}");
         }
     }
 }
