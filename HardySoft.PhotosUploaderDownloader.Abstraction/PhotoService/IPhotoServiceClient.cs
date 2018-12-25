@@ -1,5 +1,6 @@
 ﻿namespace HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService
 {
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     using Security;
 
@@ -20,7 +21,7 @@
         /// </summary>
         /// <param name="oauthToken">The token returned from OAuth authentication.</param>
         /// <returns>The asynchronous operation task with albums information.</returns>
-        Task<string> GetAlbums(OAuthToken oauthToken);
+        Task<IEnumerable<Album>> GetAlbums(OAuthToken oauthToken);
 
         /// <summary>
         /// Create a new album.

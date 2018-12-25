@@ -1,34 +1,84 @@
 ﻿namespace HardySoft.PhotosUploaderDownloader.Google.PhotoService
 {
     using System;
-    using System.IO;
-    using System.Net;
-    using System.Text;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Net.Sockets;
     using System.Threading.Tasks;
     using Abstraction.PhotoService;
     using Abstraction.Security;
+    using ApiClient;
+    using Newtonsoft.Json;
 
     /// <summary>
     /// The Google Photos Library client class.
     /// </summary>
     public class GooglePhotosLibraryClient : IPhotoServiceClient
     {
-        /// <inheritdoc />
-        public async Task<string> GetUserInfo(OAuthToken oauthToken)
-        {
-            // builds the  request
-            string userInfoRequestUri = "https://www.googleapis.com/oauth2/v3/userinfo";
+        /// <summary>
+        /// The Google Api client implementation.
+        /// </summary>
+        private readonly IApiClient apiClient;
 
-            return await GetApiCall(oauthToken, new Uri(userInfoRequestUri));
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GooglePhotosLibraryClient"/> class.
+        /// </summary>
+        /// <param name="apiClient">The Google Api client implementation.</param>
+        public GooglePhotosLibraryClient(IApiClient apiClient)
+        {
+            this.apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
         }
 
         /// <inheritdoc />
-        public async Task<string> GetAlbums(OAuthToken oauthToken)
+        public async Task<string> GetUserInfo(OAuthToken oauthToken)
         {
-            // builds the  request
-            string albumRequestUri = "https://photoslibrary.googleapis.com/v1/albums";
+            const string userInfoRequestUri = "https://www.googleapis.com/oauth2/v3/userinfo";
 
-            return await GetApiCall(oauthToken, new Uri(albumRequestUri));
+            return await this.apiClient.GetApiCall(oauthToken, new Uri(userInfoRequestUri));
+        }
+
+        /// <inheritdoc />
+        public async Task<IEnumerable<Album>> GetAlbums(OAuthToken oauthToken)
+        {
+            var albumDtoList = new List<AlbumsResponseDto>();
+
+            // builds the request, refer to https://developers.google.com/photos/library/reference/rest/v1/albums/list for further details.
+#if DEBUG
+            string albumRequestBaseUri = "https://photoslibrary.googleapis.com/v1/albums?pageSize=2";
+#else
+            string albumRequestBaseUri = "https://photoslibrary.googleapis.com/v1/albums?pageSize=50";
+#endif
+
+            AlbumsResponseDto albumDto;
+            string nextPageToken = string.Empty;
+
+            do
+            {
+                var uri = $"{albumRequestBaseUri}&pageToken={nextPageToken}";
+
+                // Get all albums from the library.
+                var jsonResponse = await this.apiClient.GetApiCall(oauthToken, new Uri(uri));
+
+                albumDto = JsonConvert.DeserializeObject<AlbumsResponseDto>(jsonResponse);
+
+                if (albumDto != null)
+                {
+                    albumDtoList.Add(albumDto);
+                    nextPageToken = albumDto.NextPageToken;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            while (!string.IsNullOrWhiteSpace(albumDto.NextPageToken));
+
+            // Find all album objects
+            var allAlbums = from aList in albumDtoList
+                from a in aList.Albums
+                select a.Map();
+
+            return allAlbums;
         }
 
         /// <inheritdoc />
@@ -38,67 +88,7 @@
 
             var jsonBody = $"{{\"album\": {{ \"title\": \"{title}\"}} }}";
 
-            return await PostApiCall(oauthToken, new Uri(albumCreationRequestUrl), jsonBody);
-        }
-
-        /// <summary>
-        /// Make Http Get calls to Google Api.
-        /// </summary>
-        /// <param name="oauthToken">The token returned from OAuth authentication.</param>
-        /// <param name="apiUri">The Uri of the Api.</param>
-        /// <returns>The asynchronous operation task with Api response.</returns>
-        private static async Task<string> GetApiCall(OAuthToken oauthToken, Uri apiUri)
-        {
-            // sends the request
-            HttpWebRequest apiRequest = (HttpWebRequest)WebRequest.Create(apiUri.AbsoluteUri);
-            apiRequest.Method = "GET";
-            apiRequest.Headers.Add($"Authorization: Bearer {oauthToken.AccessToken}");
-            apiRequest.ContentType = "application/x-www-form-urlencoded";
-            apiRequest.Accept = "Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
-
-            // gets the response
-            WebResponse apiResponse = await apiRequest.GetResponseAsync();
-            using (StreamReader responseReader = new StreamReader(apiResponse.GetResponseStream() ?? throw new InvalidOperationException("Failed to get response from API call.")))
-            {
-                // reads response body
-                string responseText = await responseReader.ReadToEndAsync();
-
-                return responseText;
-            }
-        }
-
-        /// <summary>
-        /// Make Http Post calls to Google Api.
-        /// </summary>
-        /// <param name="oauthToken">The token returned from OAuth authentication.</param>
-        /// <param name="apiUri">The Uri of the Api.</param>
-        /// <param name="jsonBody">The JSON string body.</param>
-        /// <returns>The asynchronous operation task with Api response.</returns>
-        private static async Task<string> PostApiCall(OAuthToken oauthToken, Uri apiUri, string jsonBody)
-        {
-            var postData = Encoding.ASCII.GetBytes(jsonBody);
-
-            // sends the request
-            var apiRequest = (HttpWebRequest)WebRequest.Create(apiUri.AbsoluteUri);
-            apiRequest.Method = "POST";
-            apiRequest.Headers.Add($"Authorization: Bearer {oauthToken.AccessToken}");
-            apiRequest.ContentType = "application/json";
-            apiRequest.ContentLength = postData.Length;
-
-            using (var stream = await apiRequest.GetRequestStreamAsync())
-            {
-                await stream.WriteAsync(postData, 0, postData.Length);
-            }
-
-            // gets the response
-            var apiResponse = await apiRequest.GetResponseAsync();
-            using (var responseReader = new StreamReader(apiResponse.GetResponseStream() ?? throw new InvalidOperationException("Failed to get response from API call.")))
-            {
-                // reads response body
-                string responseText = await responseReader.ReadToEndAsync();
-
-                return responseText;
-            }
+            return await this.apiClient.PostApiCall(oauthToken, new Uri(albumCreationRequestUrl), jsonBody);
         }
     }
 }

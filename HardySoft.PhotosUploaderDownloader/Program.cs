@@ -2,6 +2,7 @@
 {
     using System;
     using System.Threading.Tasks;
+    using Google.ApiClient;
     using Google.PhotoService;
     using Google.Security;
 
@@ -21,7 +22,7 @@
             var auth = new GoogleOAuthClient();
             var token = await auth.PerformAuthentication();
 
-            var api = new GooglePhotosLibraryClient();
+            var api = new GooglePhotosLibraryClient(new ApiClient());
 
             var albums = await api.GetAlbums(token);
             var album = await api.CreateAlbum("Test", token);
