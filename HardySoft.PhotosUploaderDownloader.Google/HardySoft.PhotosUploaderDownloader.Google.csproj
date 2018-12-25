@@ -1,22 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>HardySoft.PhotosUploaderDownloader</RootNamespace>
-	<LangVersion>latest</LangVersion>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsAsErrors />
-    <CodeAnalysisRuleSet>..\HardySoft.PhotoUploaderDownloader.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>.\Documentation\HardySoft.PhotoUploaderDownloader.xml</DocumentationFile>
-    <OutputPath></OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <CodeAnalysisRuleSet>..\HardySoft.PhotoUploaderDownloader.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CodeAnalysisRuleSet>..\HardySoft.PhotoUploaderDownloader.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>.\Documentation\HardySoft.PhotosUploaderDownloader.Google.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,7 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="stylecop.analyzers" Version="1.0.2">
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
@@ -34,7 +31,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HardySoft.PhotosUploaderDownloader.Abstraction\HardySoft.PhotosUploaderDownloader.Abstraction.csproj" />
-    <ProjectReference Include="..\HardySoft.PhotosUploaderDownloader.Google\HardySoft.PhotosUploaderDownloader.Google.csproj" />
   </ItemGroup>
 
 </Project>

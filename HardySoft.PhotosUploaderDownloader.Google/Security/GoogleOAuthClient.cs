@@ -1,4 +1,4 @@
-﻿namespace HardySoft.PhotosUploaderDownloader.Security
+﻿namespace HardySoft.PhotosUploaderDownloader.Google.Security
 {
     using System;
     using System.Collections.Generic;
@@ -10,12 +10,13 @@
     using System.Security.Cryptography;
     using System.Text;
     using System.Threading.Tasks;
+    using Abstraction.Security;
     using Newtonsoft.Json;
 
     /// <summary>
     /// An OAuth client to authenticate Google services.
     /// </summary>
-    internal class GoogleOAuthClient
+    public class GoogleOAuthClient : IOAuthClient
     {
         /// <summary>
         /// The Google API OAuth Uri.
@@ -33,7 +34,7 @@
         /// <returns>The asynchronous operation task.</returns>
         public async Task<OAuthToken> PerformAuthentication()
         {
-            // Generates state and PKCE values.
+            // Generates state and Proof Key for Code Exchange (PKCE) values.
             string state = RandomDataBase64Url(32);
             string codeVerifier = RandomDataBase64Url(32);
             string codeChallenge = Base64UrlEncodeNoPadding(HashWithSha256(codeVerifier));

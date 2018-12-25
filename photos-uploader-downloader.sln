@@ -6,9 +6,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{1F89819A-B832-4D5F-B303-C62EA0987786}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		HardySoft.PhotoUploaderDownloader.ruleset = HardySoft.PhotoUploaderDownloader.ruleset
+		photos-uploader-downloader.sln.DotSettings = photos-uploader-downloader.sln.DotSettings
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader", "HardySoft.PhotosUploaderDownloader\HardySoft.PhotosUploaderDownloader.csproj", "{D36AE224-3DE7-4169-8B72-B6C8231B2A07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader.Abstraction", "HardySoft.PhotosUploaderDownloader.Abstraction\HardySoft.PhotosUploaderDownloader.Abstraction.csproj", "{2D427AB9-DCE7-44D7-BD1D-88723C9DA3C6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader.Google", "HardySoft.PhotosUploaderDownloader.Google\HardySoft.PhotosUploaderDownloader.Google.csproj", "{737C8C53-40FE-4264-8F39-82C5BC0769AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +26,14 @@ Global
 		{D36AE224-3DE7-4169-8B72-B6C8231B2A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D36AE224-3DE7-4169-8B72-B6C8231B2A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D36AE224-3DE7-4169-8B72-B6C8231B2A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D427AB9-DCE7-44D7-BD1D-88723C9DA3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D427AB9-DCE7-44D7-BD1D-88723C9DA3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D427AB9-DCE7-44D7-BD1D-88723C9DA3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D427AB9-DCE7-44D7-BD1D-88723C9DA3C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{737C8C53-40FE-4264-8F39-82C5BC0769AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{737C8C53-40FE-4264-8F39-82C5BC0769AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{737C8C53-40FE-4264-8F39-82C5BC0769AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{737C8C53-40FE-4264-8F39-82C5BC0769AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

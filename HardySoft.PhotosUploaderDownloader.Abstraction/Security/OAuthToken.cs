@@ -1,11 +1,11 @@
-﻿namespace HardySoft.PhotosUploaderDownloader.Security
+﻿namespace HardySoft.PhotosUploaderDownloader.Abstraction.Security
 {
     using System;
 
     /// <summary>
     /// A class represents the structure of OAuth token after successful authentication.
     /// </summary>
-    internal class OAuthToken
+    public class OAuthToken
     {
         private DateTime authenticatedTime;
 

@@ -2,8 +2,8 @@
 {
     using System;
     using System.Threading.Tasks;
-    using HardySoft.PhotosUploaderDownloader.ApiClient;
-    using HardySoft.PhotosUploaderDownloader.Security;
+    using Google.PhotoService;
+    using Google.Security;
 
     /// <summary>
     /// Main class of the application.
@@ -21,9 +21,11 @@
             var auth = new GoogleOAuthClient();
             var token = await auth.PerformAuthentication();
 
-            var api = new GoogleApiClient();
+            var api = new GooglePhotosLibraryClient();
+
             var albums = await api.GetAlbums(token);
-            Console.WriteLine($"Hello World! {albums}");
+            var album = await api.CreateAlbum("Test", token);
+            Console.WriteLine($"Hello World! {album}");
         }
     }
 }
