@@ -28,7 +28,7 @@
         /// </summary>
         /// <param name="title">The title of the album.</param>
         /// <param name="oauthToken">The token returned from OAuth authentication.</param>
-        /// <returns>The asynchronous operation task with albums information.</returns>
-        Task<string> CreateAlbum(string title, OAuthToken oauthToken);
+        /// <returns>The asynchronous operation task with album information.</returns>
+        Task<Album> CreateAlbum(string title, OAuthToken oauthToken);
     }
 }

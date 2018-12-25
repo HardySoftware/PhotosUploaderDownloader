@@ -24,8 +24,8 @@
 
             var api = new GooglePhotosLibraryClient(new ApiClient());
 
-            var albums = await api.GetAlbums(token);
-            var album = await api.CreateAlbum("Test", token);
+            // var albums = await api.GetAlbums(token);
+            var album = await api.CreateAlbum("Test1", token);
             Console.WriteLine($"Hello World! {album}");
         }
     }
