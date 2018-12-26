@@ -37,7 +37,7 @@
         /// <param name="albumTitle">The photo album albumTitle to have the photo.</param>
         /// <param name="photoMetas">The meta data of all photos to upload.</param>
         /// <param name="oauthToken">The token returned from OAuth authentication.</param>
-        /// <returns>The asynchronous operation task with albums information.</returns>
-        Task UploadPhotosToAlbum(string albumTitle, List<PhotoMeta> photoMetas, OAuthToken oauthToken);
+        /// <returns>The asynchronous operation task with album and all photos uploaded within this album information.</returns>
+        Task<Album> UploadPhotosToAlbum(string albumTitle, List<PhotoMeta> photoMetas, OAuthToken oauthToken);
     }
 }

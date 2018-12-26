@@ -5,7 +5,7 @@
     /// <summary>
     /// A data transfer object to match with Google's simple media item definition.
     /// </summary>
-    internal class SimpleMediaItemDto
+    internal class SimpleMediaItemRequestDto
     {
         /// <summary>
         /// Gets or sets the upload token.

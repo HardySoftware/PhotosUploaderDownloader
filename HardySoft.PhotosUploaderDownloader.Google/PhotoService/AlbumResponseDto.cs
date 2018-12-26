@@ -7,7 +7,7 @@
     /// <summary>
     /// An album DTO object matching with Google's definition.
     /// </summary>
-    internal class AlbumDto
+    internal class AlbumResponseDto
     {
         /// <summary>
         /// Gets or sets the Id of the album.

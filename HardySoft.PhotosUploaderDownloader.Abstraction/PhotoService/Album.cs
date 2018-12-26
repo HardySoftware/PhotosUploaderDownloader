@@ -1,12 +1,20 @@
 ﻿namespace HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService
 {
     using System;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
 
     /// <summary>
-    /// An photo album object.
+    /// A photo album object.
     /// </summary>
     public class Album
     {
+        /// <summary>
+        /// The photos in this album.
+        /// </summary>
+        private List<Photo> photos;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Album"/> class.
         /// </summary>
@@ -21,6 +29,7 @@
 
             this.Id = id;
             this.AlbumLinkUri = albumLinkUri ?? throw new ArgumentNullException(nameof(albumLinkUri));
+            this.photos = new List<Photo>();
         }
 
         /// <summary>
@@ -42,5 +51,29 @@
         /// Gets the link of the album.
         /// </summary>
         public Uri AlbumLinkUri { get; }
+
+        /// <summary>
+        /// Gets all the photos of this album.
+        /// </summary>
+        public ReadOnlyCollection<Photo> Photos => new ReadOnlyCollection<Photo>(this.photos);
+
+        /// <summary>
+        /// Adds a photo to this album.
+        /// </summary>
+        /// <param name="photo">The photo object to add to the album.</param>
+        public void AddPhoto(Photo photo)
+        {
+            if (photo == null)
+            {
+                throw new ArgumentNullException(nameof(photo));
+            }
+
+            if (this.photos.Any(x => x.Id == photo.Id))
+            {
+                throw new InvalidOperationException($"The photo with Id {photo.Id} has already been added to the album.");
+            }
+
+            this.photos.Add(photo);
+        }
     }
 }

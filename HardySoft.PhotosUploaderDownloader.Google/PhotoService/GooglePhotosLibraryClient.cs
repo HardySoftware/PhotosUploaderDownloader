@@ -121,7 +121,7 @@
 
             var jsonResponse = await this.apiClient.PostApiCall(oauthToken, new Uri(requestUrl), jsonBody);
 
-            var album = JsonConvert.DeserializeObject<AlbumDto>(jsonResponse).Map();
+            var album = JsonConvert.DeserializeObject<AlbumResponseDto>(jsonResponse).Map();
 
             // Looks like a bug from Google https://issuetracker.google.com/issues/121998358
             album.IsWriteable = true;
@@ -129,9 +129,9 @@
             return album;
         }
 
-        /// <exception cref="ArgumentNullException">If albumTitle, photo meta data or OAuth token is null.</exception>
+        /// <exception cref="ArgumentNullException">If album title, photo meta data or OAuth token is null.</exception>
         /// <inheritdoc />
-        public async Task UploadPhotosToAlbum(string albumTitle, List<PhotoMeta> photoMetas, OAuthToken oauthToken)
+        public async Task<Album> UploadPhotosToAlbum(string albumTitle, List<PhotoMeta> photoMetas, OAuthToken oauthToken)
         {
             if (string.IsNullOrWhiteSpace(albumTitle))
             {
@@ -148,9 +148,91 @@
                 throw new ArgumentNullException(nameof(photoMetas));
             }
 
+            // Prepare the album.
+            var album = await this.FindOrCreateAlbum(albumTitle, oauthToken);
+
+            // Upload photos.
+            var mediaCreateRequest = await this.UploadPhotos(photoMetas, oauthToken, album);
+
+            // Add uploaded photos to album.
+            var jsonResponseString = await this.apiClient.PostApiCall(
+                oauthToken,
+                new Uri("https://photoslibrary.googleapis.com/v1/mediaItems:batchCreate"),
+                JsonConvert.SerializeObject(mediaCreateRequest));
+
+            var jsonResponse = JsonConvert.DeserializeObject<BatchMediaItemCreateResponseDto>(jsonResponseString);
+            var photosUploaded = jsonResponse.Map().ToList();
+
+            foreach (var photo in photosUploaded)
+            {
+                album.AddPhoto(photo);
+            }
+
+            if (photosUploaded.Count() != mediaCreateRequest.MediaItems.Length)
+            {
+                // some photos are not added to album successfully.
+                var failedPhotos = mediaCreateRequest.MediaItems.Where(photoToCreate =>
+                    jsonResponse.NewMediaItemResults.All(photoCreated => photoToCreate.SimpleMediaItem.UploadToken != photoCreated.UploadToken));
+
+                var failedPhotoFileNames = from p in failedPhotos
+                    select p.FileName;
+
+                throw new PhotoUploadException(album, failedPhotoFileNames.ToArray());
+            }
+
+            return album;
+        }
+
+        /// <summary>
+        /// Uploads all photos.
+        /// </summary>
+        /// <param name="photoMetas">The photos to upload.</param>
+        /// <param name="oauthToken">The token returned from OAuth authentication.</param>
+        /// <param name="album">The photo album to be added to after photos are uploaded.</param>
+        /// <returns>A request DTO to add uploaded photos to album.</returns>
+        private async Task<BatchMediaItemCreateRequestDto> UploadPhotos(List<PhotoMeta> photoMetas, OAuthToken oauthToken, Album album)
+        {
+            // Refer to https://developers.google.com/photos/library/guides/upload-media for the steps how to upload images.
+            var mediaCreateRequest = new BatchMediaItemCreateRequestDto()
+            {
+                AlbumId = album.Id,
+                MediaItems = new NewMediaItemRequestDto[photoMetas.Count]
+            };
+
+            var uploadApiUrl = new Uri("https://photoslibrary.googleapis.com/v1/uploads");
+            var mediaIndex = 0;
+            foreach (var photoMeta in photoMetas)
+            {
+                var uploadToken =
+                    await this.apiClient.UploadBinaryCall(oauthToken, uploadApiUrl, photoMeta.FileName, photoMeta.PhotoData);
+                mediaCreateRequest.MediaItems[mediaIndex] = new NewMediaItemRequestDto
+                {
+                    Description = photoMeta.Title + " " + photoMeta.Description,
+                    FileName = photoMeta.FileName,
+                    SimpleMediaItem = new SimpleMediaItemRequestDto()
+                    {
+                        UploadToken = uploadToken
+                    }
+                };
+
+                mediaIndex++;
+            }
+
+            return mediaCreateRequest;
+        }
+
+        /// <summary>
+        /// Finds existing album already created or create a new album.
+        /// </summary>
+        /// <param name="albumTitle">The album title.</param>
+        /// <param name="oauthToken">The token returned from OAuth authentication.</param>
+        /// <returns>The expected album with the title.</returns>
+        private async Task<Album> FindOrCreateAlbum(string albumTitle, OAuthToken oauthToken)
+        {
             var existingAlbums = await this.GetAlbums(oauthToken);
 
-            var album = existingAlbums.FirstOrDefault(x => string.Compare(x.Title, albumTitle, StringComparison.OrdinalIgnoreCase) == 0);
+            var album = existingAlbums.FirstOrDefault(x =>
+                string.Compare(x.Title, albumTitle, StringComparison.OrdinalIgnoreCase) == 0);
 
             if (album == null)
             {
@@ -164,34 +246,7 @@
                 }
             }
 
-            var mediaCreateRequest = new BatchMediaItemCreateRequestDto()
-            {
-                AlbumId = album.Id,
-                MediaItems = new MediaItemDto[photoMetas.Count]
-            };
-
-            var mediaIndex = 0;
-            foreach (var photoMeta in photoMetas)
-            {
-                var uploadToken = await this.apiClient.UploadBinaryCall(oauthToken, new Uri("https://photoslibrary.googleapis.com/v1/uploads"), photoMeta.FileName, photoMeta.PhotoData);
-                mediaCreateRequest.MediaItems[mediaIndex] = new MediaItemDto()
-                {
-                    Description = photoMeta.Title + " " + photoMeta.Description,
-                    SimpleMediaItem = new SimpleMediaItemDto()
-                    {
-                        UploadToken = uploadToken
-                    }
-                };
-
-                mediaIndex++;
-            }
-
-            var response = await this.apiClient.PostApiCall(
-                oauthToken,
-                new Uri("https://photoslibrary.googleapis.com/v1/mediaItems:batchCreate"),
-                JsonConvert.SerializeObject(mediaCreateRequest));
-
-            throw new NotImplementedException();
+            return album;
         }
     }
 }

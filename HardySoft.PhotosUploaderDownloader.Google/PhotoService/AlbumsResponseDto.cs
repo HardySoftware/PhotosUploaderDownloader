@@ -11,7 +11,7 @@
         /// Gets or sets an array of album object returned from a service call.
         /// </summary>
         [JsonProperty("albums")]
-        public AlbumDto[] Albums { get; set; }
+        public AlbumResponseDto[] Albums { get; set; }
 
         /// <summary>
         /// Gets or sets next page token if there are more albums to return beyond this single call.

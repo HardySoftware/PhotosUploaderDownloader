@@ -17,6 +17,6 @@
         /// Gets or sets the media items to be created in the album.
         /// </summary>
         [JsonProperty("newMediaItems")]
-        public MediaItemDto[] MediaItems { get; set; }
+        public NewMediaItemRequestDto[] MediaItems { get; set; }
     }
 }
