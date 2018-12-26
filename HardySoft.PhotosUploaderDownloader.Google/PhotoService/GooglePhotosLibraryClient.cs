@@ -37,9 +37,9 @@
                 throw new ArgumentNullException(nameof(oauthToken));
             }
 
-            const string userInfoRequestUri = "https://www.googleapis.com/oauth2/v3/userinfo";
+            const string requestUri = "https://www.googleapis.com/oauth2/v3/userinfo";
 
-            return await this.apiClient.GetApiCall(oauthToken, new Uri(userInfoRequestUri));
+            return await this.apiClient.GetApiCall(oauthToken, new Uri(requestUri));
         }
 
         /// <exception cref="ArgumentNullException">If any of the input parameter is null.</exception>
@@ -86,14 +86,14 @@
 
             // Find all album objects
             var allAlbums = from aList in albumDtoList
-                from a in aList.Albums
-                select a.Map();
+                            from a in aList.Albums
+                            select a.Map();
 
             return allAlbums;
         }
 
         /// <exception cref="ArgumentNullException">If any of the input parameter is null.</exception>
-        /// <exception cref="AlbumAlreadyExistsException">If the title already exists in target Google Photos Library.</exception>
+        /// <exception cref="AlbumAlreadyExistsException">If the albumTitle already exists in target Google Photos Library.</exception>
         /// <inheritdoc />
         public async Task<Album> CreateAlbum(string title, OAuthToken oauthToken)
         {
@@ -111,15 +111,15 @@
 
             if (existingAlbums.Any(x => string.Compare(x.Title, title, StringComparison.OrdinalIgnoreCase) == 0))
             {
-                // In Google Photos Library the "title" is not unique, but this application would rather treat it unique.
+                // In Google Photos Library the "albumTitle" is not unique, but this application would rather treat it unique.
                 throw new AlbumAlreadyExistsException(title);
             }
 
-            var albumCreationRequestUrl = "https://photoslibrary.googleapis.com/v1/albums";
+            const string requestUrl = "https://photoslibrary.googleapis.com/v1/albums";
 
-            var jsonBody = $"{{\"album\": {{ \"title\": \"{title}\"}} }}";
+            var jsonBody = $"{{\"album\": {{ \"albumTitle\": \"{title}\"}} }}";
 
-            var jsonResponse = await this.apiClient.PostApiCall(oauthToken, new Uri(albumCreationRequestUrl), jsonBody);
+            var jsonResponse = await this.apiClient.PostApiCall(oauthToken, new Uri(requestUrl), jsonBody);
 
             var album = JsonConvert.DeserializeObject<AlbumDto>(jsonResponse).Map();
 
@@ -127,6 +127,71 @@
             album.IsWriteable = true;
 
             return album;
+        }
+
+        /// <exception cref="ArgumentNullException">If albumTitle, photo meta data or OAuth token is null.</exception>
+        /// <inheritdoc />
+        public async Task UploadPhotosToAlbum(string albumTitle, List<PhotoMeta> photoMetas, OAuthToken oauthToken)
+        {
+            if (string.IsNullOrWhiteSpace(albumTitle))
+            {
+                throw new ArgumentNullException(nameof(albumTitle));
+            }
+
+            if (oauthToken == null)
+            {
+                throw new ArgumentNullException(nameof(oauthToken));
+            }
+
+            if (photoMetas == null || !photoMetas.Any())
+            {
+                throw new ArgumentNullException(nameof(photoMetas));
+            }
+
+            var existingAlbums = await this.GetAlbums(oauthToken);
+
+            var album = existingAlbums.FirstOrDefault(x => string.Compare(x.Title, albumTitle, StringComparison.OrdinalIgnoreCase) == 0);
+
+            if (album == null)
+            {
+                album = await this.CreateAlbum(albumTitle, oauthToken);
+            }
+            else
+            {
+                if (!album.IsWriteable)
+                {
+                    throw new AlbumNotWriteableException(albumTitle);
+                }
+            }
+
+            var mediaCreateRequest = new BatchMediaItemCreateRequestDto()
+            {
+                AlbumId = album.Id,
+                MediaItems = new MediaItemDto[photoMetas.Count]
+            };
+
+            var mediaIndex = 0;
+            foreach (var photoMeta in photoMetas)
+            {
+                var uploadToken = await this.apiClient.UploadBinaryCall(oauthToken, new Uri("https://photoslibrary.googleapis.com/v1/uploads"), photoMeta.FileName, photoMeta.PhotoData);
+                mediaCreateRequest.MediaItems[mediaIndex] = new MediaItemDto()
+                {
+                    Description = photoMeta.Title + " " + photoMeta.Description,
+                    SimpleMediaItem = new SimpleMediaItemDto()
+                    {
+                        UploadToken = uploadToken
+                    }
+                };
+
+                mediaIndex++;
+            }
+
+            var response = await this.apiClient.PostApiCall(
+                oauthToken,
+                new Uri("https://photoslibrary.googleapis.com/v1/mediaItems:batchCreate"),
+                JsonConvert.SerializeObject(mediaCreateRequest));
+
+            throw new NotImplementedException();
         }
     }
 }

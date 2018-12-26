@@ -26,9 +26,18 @@
         /// <summary>
         /// Create a new album.
         /// </summary>
-        /// <param name="title">The title of the album.</param>
+        /// <param name="title">The albumTitle of the album.</param>
         /// <param name="oauthToken">The token returned from OAuth authentication.</param>
         /// <returns>The asynchronous operation task with album information.</returns>
         Task<Album> CreateAlbum(string title, OAuthToken oauthToken);
+
+        /// <summary>
+        /// Uploads brand new photos to a album.
+        /// </summary>
+        /// <param name="albumTitle">The photo album albumTitle to have the photo.</param>
+        /// <param name="photoMetas">The meta data of all photos to upload.</param>
+        /// <param name="oauthToken">The token returned from OAuth authentication.</param>
+        /// <returns>The asynchronous operation task with albums information.</returns>
+        Task UploadPhotosToAlbum(string albumTitle, List<PhotoMeta> photoMetas, OAuthToken oauthToken);
     }
 }

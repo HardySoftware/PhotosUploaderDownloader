@@ -1,7 +1,10 @@
 ﻿namespace HardySoft.PhotosUploaderDownloader
 {
     using System;
+    using System.Collections.Generic;
+    using System.IO;
     using System.Threading.Tasks;
+    using Abstraction.PhotoService;
     using Google.ApiClient;
     using Google.PhotoService;
     using Google.Security;
@@ -25,8 +28,23 @@
             var api = new GooglePhotosLibraryClient(new ApiClient());
 
             // var albums = await api.GetAlbums(token);
-            var album = await api.CreateAlbum("Test1", token);
-            Console.WriteLine($"Hello World! {album}");
+            // var album = await api.CreateAlbum("Test1", token);
+            var photoMetas = new List<PhotoMeta>()
+            {
+                new PhotoMeta(
+                    File.ReadAllBytes(
+                        @"C:\Users\hardy\Pictures\Flickr\flickr-downloadr-[2015 Turkey - Sumela monastery]-2018-11-05_21-36-46\23738517934.jpg"),
+                    "23738517934.jpg")
+                {
+                    Title = "Sumela monastery",
+                    Description = "Sumela monastery description",
+                    Location = new GeoCoordinate(40.690229m, 39.657554m)
+                }
+            };
+
+            await api.UploadPhotosToAlbum("Test1", photoMetas, token);
+
+            // Console.WriteLine($"Hello World! {album}");
         }
     }
 }
