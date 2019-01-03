@@ -17,6 +17,9 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>.\Documentation\HardySoft.PhotoUploaderDownloader.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

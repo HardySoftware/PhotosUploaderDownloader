@@ -17,7 +17,7 @@ before_build:
 build:
   project: photos-uploader-downloader.sln
   publish_core_console: true
-  verbosity: detailed
+  verbosity: normal
 
 dotnet_csproj:
   patch: true
