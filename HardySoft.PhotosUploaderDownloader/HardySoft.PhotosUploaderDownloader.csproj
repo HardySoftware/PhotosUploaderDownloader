@@ -10,13 +10,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\HardySoft.PhotoUploaderDownloader.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>.\Documentation\HardySoft.PhotoUploaderDownloader.xml</DocumentationFile>
     <OutputPath></OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\HardySoft.PhotoUploaderDownloader.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
     <DocumentationFile>.\Documentation\HardySoft.PhotoUploaderDownloader.xml</DocumentationFile>
