@@ -1,0 +1,29 @@
+image: ubuntu
+
+version: 1.0.{build}
+
+skip_tags: true
+
+skip_branch_with_pr: true
+
+matrix:
+  fast_finish: true
+
+configuration: Release
+
+before_build:
+  - ps: Copy-Item .\Secrets.Google.cs .\HardySoft.PhotosUploaderDownloader.Google\Security\Secrets.cs
+
+build:
+  project: photos-uploader-downloader.sln
+  publish_core_console: true
+  verbosity: detailed
+
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
