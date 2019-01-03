@@ -2,6 +2,9 @@ image: ubuntu
 
 version: 1.0.{build}
 
+install:
+- ps: dotnet tool install --global coverlet.console
+
 skip_tags: true
 
 skip_branch_with_pr: true
@@ -22,7 +25,7 @@ before_build:
 build:
   project: photos-uploader-downloader.sln
   publish_core_console: true
-  verbosity: normal
+  verbosity: minimal
 
 dotnet_csproj:
   patch: true
