@@ -4,11 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{1F89819A-B832-4D5F-B303-C62EA0987786}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		HardySoft.PhotoUploaderDownloader.ruleset = HardySoft.PhotoUploaderDownloader.ruleset
-		photos-uploader-downloader.sln.DotSettings = photos-uploader-downloader.sln.DotSettings
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader", "HardySoft.PhotosUploaderDownloader\HardySoft.PhotosUploaderDownloader.csproj", "{D36AE224-3DE7-4169-8B72-B6C8231B2A07}"
 EndProject
@@ -16,7 +11,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDow
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader.Google", "HardySoft.PhotosUploaderDownloader.Google\HardySoft.PhotosUploaderDownloader.Google.csproj", "{737C8C53-40FE-4264-8F39-82C5BC0769AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardySoft.PhotosUploaderDownloader.Google.Test", "HardySoft.PhotosUploaderDownloader.Google.Test\HardySoft.PhotosUploaderDownloader.Google.Test.csproj", "{6FAF2793-ADB9-46CC-8025-87D18FF1F5EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader.Google.Test", "HardySoft.PhotosUploaderDownloader.Google.Test\HardySoft.PhotosUploaderDownloader.Google.Test.csproj", "{6FAF2793-ADB9-46CC-8025-87D18FF1F5EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Secrets", "Secrets", "{9A05B940-2239-4048-AF5E-480DAABC96DC}"
+	ProjectSection(SolutionItems) = preProject
+		Secrets.Google.cs = Secrets.Google.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{D9E3C9B9-79BA-4987-85DE-32F67C484C35}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		HardySoft.PhotoUploaderDownloader.ruleset = HardySoft.PhotoUploaderDownloader.ruleset
+		photos-uploader-downloader.sln.DotSettings = photos-uploader-downloader.sln.DotSettings
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +50,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A05B940-2239-4048-AF5E-480DAABC96DC} = {1F89819A-B832-4D5F-B303-C62EA0987786}
+		{D9E3C9B9-79BA-4987-85DE-32F67C484C35} = {1F89819A-B832-4D5F-B303-C62EA0987786}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F91DA26-79D4-4CEE-B613-71FEBF760A54}
