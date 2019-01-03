@@ -6,6 +6,11 @@ skip_tags: true
 
 skip_branch_with_pr: true
 
+skip_commits:
+  files:
+  - *.txt
+  - *.md
+
 matrix:
   fast_finish: true
 
