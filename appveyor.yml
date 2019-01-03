@@ -36,7 +36,5 @@ dotnet_csproj:
   file_version: '{version}'
   informational_version: '{version}'
 
-test:
-  assemblies:
-    only:
-      - HardySoft.PhotosUploaderDownloader.Google.Test.dll
+test_script:
+  - dotnet test /p:CollectCoverage=true
