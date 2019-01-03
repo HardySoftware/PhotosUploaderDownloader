@@ -27,3 +27,8 @@ dotnet_csproj:
   assembly_version: '{version}'
   file_version: '{version}'
   informational_version: '{version}'
+
+test:
+  assemblies:
+    only:
+      - HardySoft.PhotosUploaderDownloader.Google.Test.dll
