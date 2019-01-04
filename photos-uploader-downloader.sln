@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Secrets", "Secrets", "{9A05B940-2239-4048-AF5E-480DAABC96DC}"
 	ProjectSection(SolutionItems) = preProject
 		Secrets.Google.cs = Secrets.Google.cs
+		Secrets.Imgur.cs = Secrets.Imgur.cs
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{D9E3C9B9-79BA-4987-85DE-32F67C484C35}"
@@ -24,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{D9
 		HardySoft.PhotoUploaderDownloader.ruleset = HardySoft.PhotoUploaderDownloader.ruleset
 		photos-uploader-downloader.sln.DotSettings = photos-uploader-downloader.sln.DotSettings
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardySoft.PhotosUploaderDownloader.Imgur", "HardySoft.PhotosUploaderDownloader.Imgur\HardySoft.PhotosUploaderDownloader.Imgur.csproj", "{BDAB4E90-BFAE-44EF-ADA3-AB99883D1C6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +50,10 @@ Global
 		{6FAF2793-ADB9-46CC-8025-87D18FF1F5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FAF2793-ADB9-46CC-8025-87D18FF1F5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FAF2793-ADB9-46CC-8025-87D18FF1F5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDAB4E90-BFAE-44EF-ADA3-AB99883D1C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDAB4E90-BFAE-44EF-ADA3-AB99883D1C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDAB4E90-BFAE-44EF-ADA3-AB99883D1C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDAB4E90-BFAE-44EF-ADA3-AB99883D1C6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

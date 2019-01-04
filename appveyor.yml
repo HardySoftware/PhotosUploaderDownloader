@@ -21,6 +21,7 @@ configuration: Release
 
 before_build:
   - ps: Copy-Item .\Secrets.Google.cs .\HardySoft.PhotosUploaderDownloader.Google\Security\Secrets.cs
+  - ps: Copy-Item .\Secrets.Imgur.cs .\HardySoft.PhotosUploaderDownloader.Imgur\Security\Secrets.cs
 
 build:
   project: photos-uploader-downloader.sln
