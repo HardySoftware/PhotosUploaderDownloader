@@ -77,5 +77,11 @@
         {
             this.authenticatedTime = DateTime.Now;
         }
+
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            return $"{this.AccessToken} - {this.IdToken} - {this.RefreshToken}".GetHashCode();
+        }
     }
 }
