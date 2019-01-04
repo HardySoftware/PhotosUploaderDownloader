@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HardySoft.PhotosUploaderDownloader.Abstraction\HardySoft.PhotosUploaderDownloader.Abstraction.csproj" />
+    <ProjectReference Include="..\HardySoft.PhotosUploaderDownloader.Abstractions\HardySoft.PhotosUploaderDownloader.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

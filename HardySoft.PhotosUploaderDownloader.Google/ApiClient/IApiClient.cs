@@ -2,7 +2,7 @@
 {
     using System;
     using System.Threading.Tasks;
-    using Abstraction.Security;
+    using Abstractions.Security;
 
     /// <summary>
     /// An interface to define the supported Google Api client operations.

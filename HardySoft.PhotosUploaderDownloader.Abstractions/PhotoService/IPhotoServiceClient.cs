@@ -1,4 +1,4 @@
-﻿namespace HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService
+﻿namespace HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;

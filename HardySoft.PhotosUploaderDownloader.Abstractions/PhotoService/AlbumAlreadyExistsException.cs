@@ -1,18 +1,18 @@
-﻿namespace HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService
+﻿namespace HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService
 {
     using System;
 
     /// <summary>
-    /// An exception to throw when the album is not write-able to this application while photos are to be uploaded to it.
+    /// An exception to throw when the application tries to create a duplication album.
     /// </summary>
-    public class AlbumNotWriteableException : InvalidOperationException
+    public class AlbumAlreadyExistsException : InvalidOperationException
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AlbumNotWriteableException"/> class.
+        /// Initializes a new instance of the <see cref="AlbumAlreadyExistsException"/> class.
         /// </summary>
         /// <param name="albumTitle">The title of the album which already exists in target photo service.</param>
-        public AlbumNotWriteableException(string albumTitle)
-            : base($"The album {albumTitle} does not allow this application to write to it.")
+        public AlbumAlreadyExistsException(string albumTitle)
+            : base($"The album with the same title {albumTitle} already exists.")
         {
             if (string.IsNullOrWhiteSpace(albumTitle))
             {

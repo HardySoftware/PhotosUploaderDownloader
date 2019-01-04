@@ -1,8 +1,6 @@
-﻿namespace HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService
+﻿namespace HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
     /// A photo object.

@@ -1,4 +1,4 @@
-﻿namespace HardySoft.PhotosUploaderDownloader.Abstraction.Security
+﻿namespace HardySoft.PhotosUploaderDownloader.Abstractions.Security
 {
     using System;
 

@@ -1,7 +1,7 @@
 ﻿namespace HardySoft.PhotosUploaderDownloader.Google.PhotoService
 {
     using System;
-    using Abstraction.PhotoService;
+    using Abstractions.PhotoService;
     using Newtonsoft.Json;
 
     /// <summary>

@@ -2,7 +2,7 @@
 {
     using System;
     using System.Threading.Tasks;
-    using Abstraction.Security;
+    using Abstractions.Security;
     using ApiClient;
     using AutoFixture;
     using Moq;

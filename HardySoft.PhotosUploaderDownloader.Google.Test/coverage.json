@@ -1,44 +1,44 @@
 {
-  "HardySoft.PhotosUploaderDownloader.Abstraction.dll": {
-    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstraction\\Security\\OAuthToken.cs": {
-      "HardySoft.PhotosUploaderDownloader.Abstraction.Security.OAuthToken": {
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.Security.OAuthToken::get_AccessToken()": {
+  "HardySoft.PhotosUploaderDownloader.Abstractions.dll": {
+    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstractions\\Security\\OAuthToken.cs": {
+      "HardySoft.PhotosUploaderDownloader.Abstractions.Security.OAuthToken": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.Security.OAuthToken::get_AccessToken()": {
           "Lines": {
             "46": 0
           },
           "Branches": []
         },
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.Security.OAuthToken::get_IdToken()": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.Security.OAuthToken::get_IdToken()": {
           "Lines": {
             "51": 0
           },
           "Branches": []
         },
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.Security.OAuthToken::get_RefreshToken()": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.Security.OAuthToken::get_RefreshToken()": {
           "Lines": {
             "56": 0
           },
           "Branches": []
         },
-        "System.Int32 HardySoft.PhotosUploaderDownloader.Abstraction.Security.OAuthToken::get_ExpiresInSeconds()": {
+        "System.Int32 HardySoft.PhotosUploaderDownloader.Abstractions.Security.OAuthToken::get_ExpiresInSeconds()": {
           "Lines": {
             "61": 0
           },
           "Branches": []
         },
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.Security.OAuthToken::get_TokenType()": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.Security.OAuthToken::get_TokenType()": {
           "Lines": {
             "66": 0
           },
           "Branches": []
         },
-        "System.Boolean HardySoft.PhotosUploaderDownloader.Abstraction.Security.OAuthToken::get_IsTokenExpired()": {
+        "System.Boolean HardySoft.PhotosUploaderDownloader.Abstractions.Security.OAuthToken::get_IsTokenExpired()": {
           "Lines": {
             "71": 0
           },
           "Branches": []
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.Security.OAuthToken::RenewToken()": {
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.Security.OAuthToken::RenewToken()": {
           "Lines": {
             "77": 0,
             "78": 0,
@@ -46,25 +46,33 @@
           },
           "Branches": []
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.Security.OAuthToken::.ctor(System.String,System.String,System.String,System.Int32)": {
+        "System.Int32 HardySoft.PhotosUploaderDownloader.Abstractions.Security.OAuthToken::GetHashCode()": {
           "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0
+          },
+          "Branches": []
+        },
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.Security.OAuthToken::.ctor(System.String,System.String,System.String,System.Int32)": {
+          "Lines": {
+            "19": 1,
+            "20": 1,
+            "21": 1,
             "22": 0,
             "23": 0,
-            "26": 0,
+            "26": 1,
             "27": 0,
             "28": 0,
-            "31": 0,
+            "31": 1,
             "32": 0,
             "33": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "41": 0
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "40": 1,
+            "41": 1
           },
           "Branches": [
             {
@@ -81,7 +89,7 @@
               "EndOffset": 30,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 26,
@@ -97,7 +105,7 @@
               "EndOffset": 52,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 31,
@@ -113,45 +121,45 @@
               "EndOffset": 78,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
       }
     },
-    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstraction\\PhotoService\\Album.cs": {
-      "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album": {
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album::get_Id()": {
+    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstractions\\PhotoService\\Album.cs": {
+      "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album::get_Id()": {
           "Lines": {
             "38": 0
           },
           "Branches": []
         },
-        "System.Boolean HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album::get_IsWriteable()": {
+        "System.Boolean HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album::get_IsWriteable()": {
           "Lines": {
             "43": 0
           },
           "Branches": []
         },
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album::get_Title()": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album::get_Title()": {
           "Lines": {
             "48": 0
           },
           "Branches": []
         },
-        "System.Uri HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album::get_AlbumLinkUri()": {
+        "System.Uri HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album::get_AlbumLinkUri()": {
           "Lines": {
             "53": 0
           },
           "Branches": []
         },
-        "System.Collections.ObjectModel.ReadOnlyCollection`1<HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo> HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album::get_Photos()": {
+        "System.Collections.ObjectModel.ReadOnlyCollection`1<HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo> HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album::get_Photos()": {
           "Lines": {
             "58": 0
           },
           "Branches": []
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album::AddPhoto(HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo)": {
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album::AddPhoto(HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo)": {
           "Lines": {
             "65": 0,
             "66": 0,
@@ -198,7 +206,7 @@
             }
           ]
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album::.ctor(System.String,System.Uri)": {
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album::.ctor(System.String,System.Uri)": {
           "Lines": {
             "23": 0,
             "24": 0,
@@ -247,15 +255,15 @@
         }
       }
     },
-    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstraction\\PhotoService\\AlbumAlreadyExistsException.cs": {
-      "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.AlbumAlreadyExistsException": {
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.AlbumAlreadyExistsException::get_AlbumTitle()": {
+    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstractions\\PhotoService\\AlbumAlreadyExistsException.cs": {
+      "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.AlbumAlreadyExistsException": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.AlbumAlreadyExistsException::get_AlbumTitle()": {
           "Lines": {
             "28": 0
           },
           "Branches": []
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.AlbumAlreadyExistsException::.ctor(System.String)": {
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.AlbumAlreadyExistsException::.ctor(System.String)": {
           "Lines": {
             "15": 0,
             "16": 0,
@@ -286,15 +294,15 @@
         }
       }
     },
-    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstraction\\PhotoService\\AlbumNotWriteableException.cs": {
-      "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.AlbumNotWriteableException": {
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.AlbumNotWriteableException::get_AlbumTitle()": {
+    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstractions\\PhotoService\\AlbumNotWriteableException.cs": {
+      "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.AlbumNotWriteableException": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.AlbumNotWriteableException::get_AlbumTitle()": {
           "Lines": {
             "28": 0
           },
           "Branches": []
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.AlbumNotWriteableException::.ctor(System.String)": {
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.AlbumNotWriteableException::.ctor(System.String)": {
           "Lines": {
             "15": 0,
             "16": 0,
@@ -325,21 +333,21 @@
         }
       }
     },
-    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstraction\\PhotoService\\GeoCoordinate.cs": {
-      "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.GeoCoordinate": {
-        "System.Decimal HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.GeoCoordinate::get_Latitude()": {
+    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstractions\\PhotoService\\GeoCoordinate.cs": {
+      "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.GeoCoordinate": {
+        "System.Decimal HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.GeoCoordinate::get_Latitude()": {
           "Lines": {
             "22": 0
           },
           "Branches": []
         },
-        "System.Decimal HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.GeoCoordinate::get_Longitude()": {
+        "System.Decimal HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.GeoCoordinate::get_Longitude()": {
           "Lines": {
             "27": 0
           },
           "Branches": []
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.GeoCoordinate::.ctor(System.Decimal,System.Decimal)": {
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.GeoCoordinate::.ctor(System.Decimal,System.Decimal)": {
           "Lines": {
             "13": 0,
             "14": 0,
@@ -351,58 +359,58 @@
         }
       }
     },
-    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstraction\\PhotoService\\Photo.cs": {
-      "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo": {
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo::get_Id()": {
+    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstractions\\PhotoService\\Photo.cs": {
+      "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo::get_Id()": {
           "Lines": {
-            "31": 0
+            "29": 0
           },
           "Branches": []
         },
-        "System.Uri HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo::get_PhotoLink()": {
+        "System.Uri HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo::get_PhotoLink()": {
           "Lines": {
-            "36": 0
+            "34": 0
           },
           "Branches": []
         },
-        "System.Uri HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo::get_BaseUrl()": {
+        "System.Uri HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo::get_BaseUrl()": {
           "Lines": {
-            "41": 0
+            "39": 0
           },
           "Branches": []
         },
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo::get_Description()": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo::get_Description()": {
           "Lines": {
-            "46": 0
+            "44": 0
           },
           "Branches": []
         },
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo::get_Title()": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo::get_Title()": {
           "Lines": {
-            "51": 0
+            "49": 0
           },
           "Branches": []
         },
-        "System.Nullable`1<System.DateTime> HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo::get_CreationTime()": {
+        "System.Nullable`1<System.DateTime> HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo::get_CreationTime()": {
           "Lines": {
-            "56": 0
+            "54": 0
           },
           "Branches": []
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo::.ctor(System.String,System.Uri)": {
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo::.ctor(System.String,System.Uri)": {
           "Lines": {
+            "15": 0,
+            "16": 0,
             "17": 0,
             "18": 0,
             "19": 0,
-            "20": 0,
-            "21": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0
+            "22": 0,
+            "23": 0,
+            "24": 0
           },
           "Branches": [
             {
-              "Line": 19,
+              "Line": 17,
               "Offset": 16,
               "EndOffset": 18,
               "Path": 0,
@@ -410,7 +418,7 @@
               "Hits": 0
             },
             {
-              "Line": 19,
+              "Line": 17,
               "Offset": 16,
               "EndOffset": 30,
               "Path": 1,
@@ -418,7 +426,7 @@
               "Hits": 0
             },
             {
-              "Line": 25,
+              "Line": 23,
               "Offset": 40,
               "EndOffset": 42,
               "Path": 0,
@@ -426,7 +434,7 @@
               "Hits": 0
             },
             {
-              "Line": 25,
+              "Line": 23,
               "Offset": 40,
               "EndOffset": 54,
               "Path": 1,
@@ -437,39 +445,39 @@
         }
       }
     },
-    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstraction\\PhotoService\\PhotoMeta.cs": {
-      "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoMeta": {
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoMeta::get_FileName()": {
+    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstractions\\PhotoService\\PhotoMeta.cs": {
+      "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoMeta": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoMeta::get_FileName()": {
           "Lines": {
             "48": 0
           },
           "Branches": []
         },
-        "System.Byte[] HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoMeta::get_PhotoData()": {
+        "System.Byte[] HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoMeta::get_PhotoData()": {
           "Lines": {
             "53": 0
           },
           "Branches": []
         },
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoMeta::get_Title()": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoMeta::get_Title()": {
           "Lines": {
             "58": 0
           },
           "Branches": []
         },
-        "System.String HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoMeta::get_Description()": {
+        "System.String HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoMeta::get_Description()": {
           "Lines": {
             "63": 0
           },
           "Branches": []
         },
-        "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.GeoCoordinate HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoMeta::get_Location()": {
+        "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.GeoCoordinate HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoMeta::get_Location()": {
           "Lines": {
             "68": 0
           },
           "Branches": []
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoMeta::.ctor(System.Byte[],System.String)": {
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoMeta::.ctor(System.Byte[],System.String)": {
           "Lines": {
             "22": 0,
             "23": 0,
@@ -554,7 +562,7 @@
             }
           ]
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoMeta::.cctor()": {
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoMeta::.cctor()": {
           "Lines": {
             "15": 0
           },
@@ -562,21 +570,21 @@
         }
       }
     },
-    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstraction\\PhotoService\\PhotoUploadException.cs": {
-      "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoUploadException": {
-        "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoUploadException::get_SuccessfulAlbumAndPhotos()": {
+    "D:\\Tech Sector\\Projects\\Windows Projects\\photo-uploader-downloader\\HardySoft.PhotosUploaderDownloader.Abstractions\\PhotoService\\PhotoUploadException.cs": {
+      "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoUploadException": {
+        "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoUploadException::get_SuccessfulAlbumAndPhotos()": {
           "Lines": {
             "30": 0
           },
           "Branches": []
         },
-        "System.String[] HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoUploadException::get_FailedFileNames()": {
+        "System.String[] HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoUploadException::get_FailedFileNames()": {
           "Lines": {
             "35": 0
           },
           "Branches": []
         },
-        "System.Void HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.PhotoUploadException::.ctor(HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album,System.String[])": {
+        "System.Void HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.PhotoUploadException::.ctor(HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album,System.String[])": {
           "Lines": {
             "16": 0,
             "17": 0,
@@ -1265,7 +1273,7 @@
           },
           "Branches": []
         },
-        "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album HardySoft.PhotosUploaderDownloader.Google.PhotoService.AlbumResponseDto::Map()": {
+        "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album HardySoft.PhotosUploaderDownloader.Google.PhotoService.AlbumResponseDto::Map()": {
           "Lines": {
             "41": 0,
             "42": 0,
@@ -1320,7 +1328,7 @@
           },
           "Branches": []
         },
-        "System.Collections.Generic.IEnumerable`1<HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Photo> HardySoft.PhotosUploaderDownloader.Google.PhotoService.BatchMediaItemCreateResponseDto::Map()": {
+        "System.Collections.Generic.IEnumerable`1<HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Photo> HardySoft.PhotosUploaderDownloader.Google.PhotoService.BatchMediaItemCreateResponseDto::Map()": {
           "Lines": {
             "25": 0,
             "26": 0,
@@ -1393,10 +1401,10 @@
       "HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient": {
         "System.Void HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient::.ctor(HardySoft.PhotosUploaderDownloader.Google.ApiClient.IApiClient)": {
           "Lines": {
-            "26": 1,
-            "27": 1,
-            "28": 1,
-            "29": 0
+            "26": 3,
+            "27": 3,
+            "28": 3,
+            "29": 2
           },
           "Branches": [
             {
@@ -1413,7 +1421,7 @@
               "EndOffset": 25,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 2
             }
           ]
         }
@@ -1421,12 +1429,12 @@
       "HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient/<GetUserInfo>d__2": {
         "System.Void HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient/<GetUserInfo>d__2::MoveNext()": {
           "Lines": {
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "42": 0,
-            "43": 0
+            "34": 2,
+            "35": 2,
+            "36": 1,
+            "37": 1,
+            "42": 1,
+            "43": 1
           },
           "Branches": [
             {
@@ -1435,7 +1443,7 @@
               "EndOffset": 28,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 35,
@@ -1443,15 +1451,7 @@
               "EndOffset": 40,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 42,
-              "Offset": 85,
-              "EndOffset": 87,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 42,
@@ -1459,7 +1459,7 @@
               "EndOffset": 152,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -1471,7 +1471,7 @@
           },
           "Branches": []
         },
-        "HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient/<>c::<GetAlbums>b__3_1(HardySoft.PhotosUploaderDownloader.Google.PhotoService.AlbumsResponseDto,HardySoft.PhotosUploaderDownloader.Google.PhotoService.AlbumResponseDto)": {
+        "HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient/<>c::<GetAlbums>b__3_1(HardySoft.PhotosUploaderDownloader.Google.PhotoService.AlbumsResponseDto,HardySoft.PhotosUploaderDownloader.Google.PhotoService.AlbumResponseDto)": {
           "Lines": {
             "90": 0
           },
@@ -1612,7 +1612,7 @@
         }
       },
       "HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient/<>c__DisplayClass4_0": {
-        "System.Boolean HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient/<>c__DisplayClass4_0::<CreateAlbum>b__0(HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album)": {
+        "System.Boolean HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient/<>c__DisplayClass4_0::<CreateAlbum>b__0(HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album)": {
           "Lines": {
             "112": 0
           },
@@ -2026,7 +2026,7 @@
         }
       },
       "HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient/<>c__DisplayClass7_0": {
-        "System.Boolean HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient/<>c__DisplayClass7_0::<FindOrCreateAlbum>b__0(HardySoft.PhotosUploaderDownloader.Abstraction.PhotoService.Album)": {
+        "System.Boolean HardySoft.PhotosUploaderDownloader.Google.PhotoService.GooglePhotosLibraryClient/<>c__DisplayClass7_0::<FindOrCreateAlbum>b__0(HardySoft.PhotosUploaderDownloader.Abstractions.PhotoService.Album)": {
           "Lines": {
             "235": 0
           },
@@ -8412,7 +8412,7 @@
       "MessageSinkMessageExtensions": {
         "TMessage MessageSinkMessageExtensions::Cast(Xunit.Abstractions.IMessageSinkMessage,System.Collections.Generic.HashSet`1<System.String>)": {
           "Lines": {
-            "20": 484
+            "20": 1104
           },
           "Branches": [
             {
@@ -8421,7 +8421,7 @@
               "EndOffset": 3,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 484
+              "Hits": 1104
             },
             {
               "Line": 20,
@@ -8429,7 +8429,7 @@
               "EndOffset": 26,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 473
+              "Hits": 1083
             },
             {
               "Line": 20,
@@ -8437,7 +8437,7 @@
               "EndOffset": 36,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 11
+              "Hits": 21
             },
             {
               "Line": 20,
@@ -8445,19 +8445,19 @@
               "EndOffset": 36,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 11
+              "Hits": 21
             }
           ]
         },
         "System.Boolean MessageSinkMessageExtensions::Dispatch(Xunit.Abstractions.IMessageSinkMessage,System.Collections.Generic.HashSet`1<System.String>,Xunit.MessageHandler`1<TMessage>)": {
           "Lines": {
-            "33": 1189,
-            "35": 484,
-            "36": 484,
-            "38": 11,
-            "39": 11,
-            "40": 11,
-            "44": 1178
+            "33": 2711,
+            "35": 1104,
+            "36": 1104,
+            "38": 21,
+            "39": 21,
+            "40": 21,
+            "44": 2690
           },
           "Branches": [
             {
@@ -8466,7 +8466,7 @@
               "EndOffset": 3,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 484
+              "Hits": 1104
             },
             {
               "Line": 36,
@@ -8474,7 +8474,7 @@
               "EndOffset": 19,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 11
+              "Hits": 21
             },
             {
               "Line": 33,
@@ -8482,7 +8482,7 @@
               "EndOffset": 43,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1178
+              "Hits": 2690
             },
             {
               "Line": 36,
@@ -8490,7 +8490,7 @@
               "EndOffset": 43,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 1178
+              "Hits": 2690
             }
           ]
         }
@@ -9305,7 +9305,7 @@
         },
         "System.Collections.Generic.Dictionary`2<TKey,TValue> DictionaryExtensions::ToDictionaryIgnoringDuplicateKeys(System.Collections.Generic.IEnumerable`1<TValue>,System.Func`2<TValue,TKey>,System.Collections.Generic.IEqualityComparer`1<TKey>)": {
           "Lines": {
-            "44": 4
+            "44": 10
           },
           "Branches": [
             {
@@ -9329,10 +9329,10 @@
         "System.Collections.Generic.Dictionary`2<TKey,TValue> DictionaryExtensions::ToDictionaryIgnoringDuplicateKeys(System.Collections.Generic.IEnumerable`1<TInput>,System.Func`2<TInput,TKey>,System.Func`2<TInput,TValue>,System.Collections.Generic.IEqualityComparer`1<TKey>)": {
           "Lines": {
             "51": 1,
-            "53": 8,
-            "55": 3,
-            "56": 3,
-            "57": 3,
+            "53": 20,
+            "55": 9,
+            "56": 9,
+            "57": 9,
             "60": 1
           },
           "Branches": [
@@ -9342,7 +9342,7 @@
               "EndOffset": 16,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 3
+              "Hits": 9
             },
             {
               "Line": 56,
@@ -9350,7 +9350,7 @@
               "EndOffset": 40,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 3
+              "Hits": 9
             },
             {
               "Line": 56,
@@ -9358,7 +9358,7 @@
               "EndOffset": 54,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 4
+              "Hits": 10
             },
             {
               "Line": 53,
@@ -10313,23 +10313,23 @@
         "System.Collections.Generic.List`1<Xunit.TestCaseDescriptor> Xunit.DefaultTestCaseDescriptorProvider::GetTestCaseDescriptors(System.Collections.Generic.List`1<Xunit.Abstractions.ITestCase>,System.Boolean)": {
           "Lines": {
             "23": 1,
-            "25": 4,
-            "27": 1,
-            "28": 1,
-            "29": 1,
-            "33": 1,
-            "34": 1,
-            "35": 1,
-            "36": 1,
-            "37": 1,
-            "38": 1,
-            "39": 1,
-            "40": 1,
-            "41": 1,
-            "42": 1,
-            "43": 1,
-            "44": 1,
-            "45": 1,
+            "25": 8,
+            "27": 3,
+            "28": 3,
+            "29": 3,
+            "33": 3,
+            "34": 3,
+            "35": 3,
+            "36": 3,
+            "37": 3,
+            "38": 3,
+            "39": 3,
+            "40": 3,
+            "41": 3,
+            "42": 3,
+            "43": 3,
+            "44": 3,
+            "45": 3,
             "46": 0,
             "49": 1
           },
@@ -10340,7 +10340,7 @@
               "EndOffset": 24,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 27,
@@ -10356,7 +10356,7 @@
               "EndOffset": 43,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 27,
@@ -10364,7 +10364,7 @@
               "EndOffset": 43,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 27,
@@ -10380,7 +10380,7 @@
               "EndOffset": 158,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 33,
@@ -10396,7 +10396,7 @@
               "EndOffset": 178,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 33,
@@ -10420,7 +10420,7 @@
               "EndOffset": 218,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 25,
@@ -10446,49 +10446,49 @@
       "Xunit.TestCaseDescriptor": {
         "System.String Xunit.TestCaseDescriptor::get_ClassName()": {
           "Lines": {
-            "76": 3
+            "76": 9
           },
           "Branches": []
         },
         "System.String Xunit.TestCaseDescriptor::get_DisplayName()": {
           "Lines": {
-            "79": 2
+            "79": 6
           },
           "Branches": []
         },
         "System.String Xunit.TestCaseDescriptor::get_MethodName()": {
           "Lines": {
-            "82": 3
+            "82": 9
           },
           "Branches": []
         },
         "System.String Xunit.TestCaseDescriptor::get_Serialization()": {
           "Lines": {
-            "85": 1
+            "85": 3
           },
           "Branches": []
         },
         "System.String Xunit.TestCaseDescriptor::get_SkipReason()": {
           "Lines": {
-            "88": 1
+            "88": 3
           },
           "Branches": []
         },
         "System.String Xunit.TestCaseDescriptor::get_SourceFileName()": {
           "Lines": {
-            "91": 2
+            "91": 6
           },
           "Branches": []
         },
         "System.Nullable`1<System.Int32> Xunit.TestCaseDescriptor::get_SourceLineNumber()": {
           "Lines": {
-            "94": 2
+            "94": 6
           },
           "Branches": []
         },
         "System.String Xunit.TestCaseDescriptor::get_UniqueID()": {
           "Lines": {
-            "100": 4
+            "100": 12
           },
           "Branches": []
         },
@@ -10517,7 +10517,7 @@
         },
         "System.Void Xunit.TestCaseDescriptor::.ctor()": {
           "Lines": {
-            "16": 2
+            "16": 6
           },
           "Branches": []
         },
@@ -11179,9 +11179,9 @@
         },
         "TValue Xunit.TestFrameworkOptions::GetValue(System.String)": {
           "Lines": {
-            "73": 11,
+            "73": 15,
             "74": 0,
-            "76": 11
+            "76": 15
           },
           "Branches": [
             {
@@ -11198,7 +11198,7 @@
               "EndOffset": 23,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 11
+              "Hits": 15
             }
           ]
         },
@@ -12985,20 +12985,20 @@
       "Xunit.OptimizedRemoteMessageSink": {
         "System.Collections.Generic.HashSet`1<System.String> Xunit.OptimizedRemoteMessageSink::GetMessageTypes(Xunit.Abstractions.IMessageSinkMessage)": {
           "Lines": {
-            "23": 17,
-            "26": 17,
-            "30": 17,
-            "31": 17,
-            "34": 17,
-            "35": 17,
-            "37": 17,
+            "23": 41,
+            "26": 41,
+            "30": 41,
+            "31": 41,
+            "34": 41,
+            "35": 41,
+            "37": 41,
             "39": 17,
             "43": 138,
             "44": 17,
             "45": 17,
             "48": 17,
             "49": 17,
-            "52": 17
+            "52": 41
           },
           "Branches": [
             {
@@ -13031,13 +13031,13 @@
               "EndOffset": 140,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 17
+              "Hits": 41
             }
           ]
         },
         "System.Boolean Xunit.OptimizedRemoteMessageSink::OnMessage(Xunit.Abstractions.IMessageSinkMessage)": {
           "Lines": {
-            "56": 17
+            "56": 41
           },
           "Branches": []
         },
@@ -15846,14 +15846,14 @@
         },
         "System.Void Xunit.DefaultRunnerReporterWithTypesMessageHandler::HandleTestPassed(Xunit.MessageHandlerArgs`1<Xunit.Abstractions.ITestPassed>)": {
           "Lines": {
-            "326": 1,
-            "327": 1,
-            "328": 1,
+            "326": 3,
+            "327": 3,
+            "328": 3,
             "330": 0,
             "332": 0,
             "333": 0,
             "334": 0,
-            "336": 1
+            "336": 3
           },
           "Branches": [
             {
@@ -15878,7 +15878,7 @@
               "EndOffset": 138,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 327,
@@ -15886,7 +15886,7 @@
               "EndOffset": 138,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 1
+              "Hits": 3
             }
           ]
         },
@@ -16141,7 +16141,7 @@
       "Xunit.AggregateMessageSink": {
         "System.Collections.Generic.List`1<Xunit.IMessageSinkWithTypes> Xunit.AggregateMessageSink::get_AggregatedSinks()": {
           "Lines": {
-            "16": 90
+            "16": 178
           },
           "Branches": []
         },
@@ -16220,11 +16220,11 @@
         },
         "System.Boolean Xunit.AggregateMessageSink::OnMessageWithTypes(Xunit.Abstractions.IMessageSinkMessage,System.Collections.Generic.HashSet`1<System.String>)": {
           "Lines": {
-            "63": 34,
-            "65": 34,
-            "66": 242,
-            "67": 87,
-            "69": 34
+            "63": 78,
+            "65": 78,
+            "66": 550,
+            "67": 197,
+            "69": 78
           },
           "Branches": [
             {
@@ -16233,7 +16233,7 @@
               "EndOffset": 33,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 87
+              "Hits": 197
             },
             {
               "Line": 66,
@@ -16241,7 +16241,7 @@
               "EndOffset": 59,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 34
+              "Hits": 78
             }
           ]
         }
@@ -17636,8 +17636,8 @@
         },
         "System.Boolean Xunit.DiagnosticEventSink::OnMessageWithTypes(Xunit.Abstractions.IMessageSinkMessage,System.Collections.Generic.HashSet`1<System.String>)": {
           "Lines": {
-            "27": 35,
-            "28": 35
+            "27": 79,
+            "28": 79
           },
           "Branches": [
             {
@@ -17646,7 +17646,7 @@
               "EndOffset": 15,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 35
+              "Hits": 79
             },
             {
               "Line": 27,
@@ -17670,8 +17670,8 @@
         },
         "System.Boolean Xunit.DiscoveryEventSink::OnMessageWithTypes(Xunit.Abstractions.IMessageSinkMessage,System.Collections.Generic.HashSet`1<System.String>)": {
           "Lines": {
-            "27": 2,
-            "28": 2
+            "27": 4,
+            "28": 4
           },
           "Branches": [
             {
@@ -17680,7 +17680,7 @@
               "EndOffset": 15,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 2
+              "Hits": 4
             },
             {
               "Line": 27,
@@ -17704,36 +17704,36 @@
         },
         "System.Boolean Xunit.ExecutionEventSink::OnMessageWithTypes(Xunit.Abstractions.IMessageSinkMessage,System.Collections.Generic.HashSet`1<System.String>)": {
           "Lines": {
-            "167": 34,
-            "168": 34,
-            "169": 34,
-            "170": 34,
-            "171": 34,
-            "172": 34,
-            "173": 34,
-            "174": 34,
-            "175": 34,
-            "176": 34,
-            "177": 34,
-            "178": 34,
-            "179": 34,
-            "180": 34,
-            "181": 34,
-            "182": 34,
-            "183": 34,
-            "184": 34,
-            "185": 34,
-            "186": 34,
-            "187": 34,
-            "188": 34,
-            "189": 34,
-            "190": 34,
-            "191": 34,
-            "192": 34,
-            "193": 34,
-            "194": 34,
-            "195": 34,
-            "196": 34
+            "167": 78,
+            "168": 78,
+            "169": 78,
+            "170": 78,
+            "171": 78,
+            "172": 78,
+            "173": 78,
+            "174": 78,
+            "175": 78,
+            "176": 78,
+            "177": 78,
+            "178": 78,
+            "179": 78,
+            "180": 78,
+            "181": 78,
+            "182": 78,
+            "183": 78,
+            "184": 78,
+            "185": 78,
+            "186": 78,
+            "187": 78,
+            "188": 78,
+            "189": 78,
+            "190": 78,
+            "191": 78,
+            "192": 78,
+            "193": 78,
+            "194": 78,
+            "195": 78,
+            "196": 78
           },
           "Branches": [
             {
@@ -17742,7 +17742,7 @@
               "EndOffset": 18,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17750,7 +17750,7 @@
               "EndOffset": 36,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17758,7 +17758,7 @@
               "EndOffset": 54,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17766,7 +17766,7 @@
               "EndOffset": 72,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17774,7 +17774,7 @@
               "EndOffset": 90,
               "Path": 0,
               "Ordinal": 8,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17782,7 +17782,7 @@
               "EndOffset": 108,
               "Path": 0,
               "Ordinal": 10,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17790,7 +17790,7 @@
               "EndOffset": 126,
               "Path": 0,
               "Ordinal": 12,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17798,7 +17798,7 @@
               "EndOffset": 144,
               "Path": 0,
               "Ordinal": 14,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17806,7 +17806,7 @@
               "EndOffset": 162,
               "Path": 0,
               "Ordinal": 16,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17814,7 +17814,7 @@
               "EndOffset": 180,
               "Path": 0,
               "Ordinal": 18,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17822,7 +17822,7 @@
               "EndOffset": 198,
               "Path": 0,
               "Ordinal": 20,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17830,7 +17830,7 @@
               "EndOffset": 216,
               "Path": 0,
               "Ordinal": 22,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17838,7 +17838,7 @@
               "EndOffset": 234,
               "Path": 0,
               "Ordinal": 24,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17846,7 +17846,7 @@
               "EndOffset": 252,
               "Path": 0,
               "Ordinal": 26,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17854,7 +17854,7 @@
               "EndOffset": 270,
               "Path": 0,
               "Ordinal": 28,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17862,7 +17862,7 @@
               "EndOffset": 288,
               "Path": 0,
               "Ordinal": 30,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17870,7 +17870,7 @@
               "EndOffset": 306,
               "Path": 0,
               "Ordinal": 32,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17878,7 +17878,7 @@
               "EndOffset": 324,
               "Path": 0,
               "Ordinal": 34,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17886,7 +17886,7 @@
               "EndOffset": 342,
               "Path": 0,
               "Ordinal": 36,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17894,7 +17894,7 @@
               "EndOffset": 360,
               "Path": 0,
               "Ordinal": 38,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17902,7 +17902,7 @@
               "EndOffset": 378,
               "Path": 0,
               "Ordinal": 40,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17910,7 +17910,7 @@
               "EndOffset": 393,
               "Path": 0,
               "Ordinal": 42,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17918,7 +17918,7 @@
               "EndOffset": 408,
               "Path": 0,
               "Ordinal": 44,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17926,7 +17926,7 @@
               "EndOffset": 423,
               "Path": 0,
               "Ordinal": 46,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17934,7 +17934,7 @@
               "EndOffset": 438,
               "Path": 0,
               "Ordinal": 48,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17942,7 +17942,7 @@
               "EndOffset": 453,
               "Path": 0,
               "Ordinal": 50,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17950,7 +17950,7 @@
               "EndOffset": 468,
               "Path": 0,
               "Ordinal": 52,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17958,7 +17958,7 @@
               "EndOffset": 483,
               "Path": 0,
               "Ordinal": 54,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -17966,7 +17966,7 @@
               "EndOffset": 498,
               "Path": 0,
               "Ordinal": 56,
-              "Hits": 34
+              "Hits": 78
             },
             {
               "Line": 167,
@@ -18208,7 +18208,7 @@
       "Xunit.MessageHandlerArgs": {
         "System.Boolean Xunit.MessageHandlerArgs::get_IsStopped()": {
           "Lines": {
-            "13": 11
+            "13": 21
           },
           "Branches": []
         },
@@ -18223,15 +18223,15 @@
       "Xunit.MessageHandlerArgs`1": {
         "TMessage Xunit.MessageHandlerArgs`1::get_Message()": {
           "Lines": {
-            "43": 10
+            "43": 20
           },
           "Branches": []
         },
         "System.Void Xunit.MessageHandlerArgs`1::.ctor(TMessage)": {
           "Lines": {
-            "35": 11,
-            "37": 11,
-            "38": 11
+            "35": 21,
+            "37": 21,
+            "38": 21
           },
           "Branches": []
         }
@@ -18247,11 +18247,11 @@
         },
         "System.Boolean Xunit.RunnerEventSink::OnMessageWithTypes(Xunit.Abstractions.IMessageSinkMessage,System.Collections.Generic.HashSet`1<System.String>)": {
           "Lines": {
-            "42": 19,
-            "43": 19,
-            "44": 19,
-            "45": 19,
-            "46": 19
+            "42": 41,
+            "43": 41,
+            "44": 41,
+            "45": 41,
+            "46": 41
           },
           "Branches": [
             {
@@ -18260,7 +18260,7 @@
               "EndOffset": 15,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 19
+              "Hits": 41
             },
             {
               "Line": 42,
@@ -18268,7 +18268,7 @@
               "EndOffset": 30,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 19
+              "Hits": 41
             },
             {
               "Line": 42,
@@ -18276,7 +18276,7 @@
               "EndOffset": 45,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 19
+              "Hits": 41
             },
             {
               "Line": 42,
@@ -18284,7 +18284,7 @@
               "EndOffset": 60,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 19
+              "Hits": 41
             },
             {
               "Line": 42,
@@ -18326,7 +18326,7 @@
       "Xunit.TestDiscoverySink": {
         "System.Collections.Generic.List`1<Xunit.Abstractions.ITestCase> Xunit.TestDiscoverySink::get_TestCases()": {
           "Lines": {
-            "33": 4
+            "33": 6
           },
           "Branches": []
         },
@@ -18350,8 +18350,8 @@
         },
         "System.Boolean Xunit.TestDiscoverySink::OnMessageWithTypes(Xunit.Abstractions.IMessageSinkMessage,System.Collections.Generic.HashSet`1<System.String>)": {
           "Lines": {
-            "49": 2,
-            "50": 2
+            "49": 4,
+            "50": 4
           },
           "Branches": [
             {
@@ -18360,7 +18360,7 @@
               "EndOffset": 15,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 2
+              "Hits": 4
             },
             {
               "Line": 49,
@@ -18374,7 +18374,7 @@
         },
         "System.Void Xunit.TestDiscoverySink::<.ctor>b__2_1(Xunit.MessageHandlerArgs`1<Xunit.Abstractions.ITestCaseDiscoveryMessage>)": {
           "Lines": {
-            "26": 2
+            "26": 4
           },
           "Branches": []
         },
@@ -18900,8 +18900,8 @@
             "37": 0,
             "38": 0,
             "40": 1,
-            "41": 4,
-            "42": 4,
+            "41": 10,
+            "42": 10,
             "44": 0,
             "46": 0
           },
@@ -18983,7 +18983,7 @@
               "EndOffset": 3,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 3
+              "Hits": 9
             },
             {
               "Line": 41,
@@ -31066,11 +31066,11 @@
         },
         "System.Void Internal.Microsoft.Extensions.DependencyModel.CompilationLibrary::.ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable`1<System.String>,System.Collections.Generic.IEnumerable`1<Internal.Microsoft.Extensions.DependencyModel.Dependency>,System.Boolean,System.String,System.String)": {
           "Lines": {
-            "35": 308,
-            "37": 308,
+            "35": 332,
+            "37": 332,
             "39": 0,
-            "41": 308,
-            "42": 308
+            "41": 332,
+            "42": 332
           },
           "Branches": [
             {
@@ -31087,7 +31087,7 @@
               "EndOffset": 34,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 308
+              "Hits": 332
             }
           ]
         },
@@ -31339,13 +31339,13 @@
         },
         "System.Void Internal.Microsoft.Extensions.DependencyModel.Dependency::.ctor(System.String,System.String)": {
           "Lines": {
-            "15": 1467,
+            "15": 1571,
             "17": 0,
-            "19": 1467,
+            "19": 1571,
             "21": 0,
-            "23": 1467,
-            "24": 1467,
-            "25": 1467
+            "23": 1571,
+            "24": 1571,
+            "25": 1571
           },
           "Branches": [
             {
@@ -31362,7 +31362,7 @@
               "EndOffset": 19,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1467
+              "Hits": 1571
             },
             {
               "Line": 19,
@@ -31378,7 +31378,7 @@
               "EndOffset": 38,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 1467
+              "Hits": 1571
             }
           ]
         }
@@ -31418,7 +31418,7 @@
         },
         "System.Collections.Generic.IReadOnlyList`1<Internal.Microsoft.Extensions.DependencyModel.RuntimeFallbacks> Internal.Microsoft.Extensions.DependencyModel.DependencyContext::get_RuntimeGraph()": {
           "Lines": {
-            "61": 174
+            "61": 186
           },
           "Branches": []
         },
@@ -31602,13 +31602,13 @@
       "Internal.Microsoft.Extensions.DependencyModel.DependencyContext/LibraryMergeEqualityComparer`1": {
         "System.Boolean Internal.Microsoft.Extensions.DependencyModel.DependencyContext/LibraryMergeEqualityComparer`1::Equals(T,T)": {
           "Lines": {
-            "99": 308
+            "99": 332
           },
           "Branches": []
         },
         "System.Int32 Internal.Microsoft.Extensions.DependencyModel.DependencyContext/LibraryMergeEqualityComparer`1::GetHashCode(T)": {
           "Lines": {
-            "104": 791
+            "104": 851
           },
           "Branches": []
         }
@@ -31801,7 +31801,7 @@
             "76": 0,
             "78": 2,
             "80": 0,
-            "82": 170
+            "82": 182
           },
           "Branches": [
             {
@@ -31883,13 +31883,13 @@
         },
         "System.Collections.Generic.IEnumerable`1<System.Reflection.AssemblyName> Internal.Microsoft.Extensions.DependencyModel.DependencyContextExtensions::GetRuntimeAssemblyNames(Internal.Microsoft.Extensions.DependencyModel.RuntimeLibrary,Internal.Microsoft.Extensions.DependencyModel.DependencyContext,System.String)": {
           "Lines": {
-            "100": 168,
+            "100": 180,
             "102": 0,
-            "104": 168,
+            "104": 180,
             "106": 0,
-            "108": 168,
+            "108": 180,
             "110": 0,
-            "112": 168
+            "112": 180
           },
           "Branches": [
             {
@@ -31906,7 +31906,7 @@
               "EndOffset": 14,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 168
+              "Hits": 180
             },
             {
               "Line": 104,
@@ -31922,7 +31922,7 @@
               "EndOffset": 28,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 168
+              "Hits": 180
             },
             {
               "Line": 108,
@@ -31938,18 +31938,18 @@
               "EndOffset": 42,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 168
+              "Hits": 180
             }
           ]
         },
         "System.Reflection.AssemblyName Internal.Microsoft.Extensions.DependencyModel.DependencyContextExtensions::GetAssemblyName(System.String)": {
           "Lines": {
-            "117": 348,
-            "118": 348,
+            "117": 356,
+            "118": 356,
             "120": 0,
-            "123": 348,
+            "123": 356,
             "125": 0,
-            "128": 348
+            "128": 356
           },
           "Branches": [
             {
@@ -31966,7 +31966,7 @@
               "EndOffset": 32,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 348
+              "Hits": 356
             },
             {
               "Line": 123,
@@ -31982,15 +31982,15 @@
               "EndOffset": 70,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 348
+              "Hits": 356
             }
           ]
         },
         "System.Collections.Generic.IEnumerable`1<System.String> Internal.Microsoft.Extensions.DependencyModel.DependencyContextExtensions::ResolveAssets(Internal.Microsoft.Extensions.DependencyModel.DependencyContext,System.String,System.Collections.Generic.IEnumerable`1<Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup>)": {
           "Lines": {
-            "136": 4368,
-            "137": 168,
-            "138": 168
+            "136": 4680,
+            "137": 180,
+            "138": 180
           },
           "Branches": [
             {
@@ -32007,7 +32007,7 @@
               "EndOffset": 58,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 168
+              "Hits": 180
             },
             {
               "Line": 137,
@@ -32023,17 +32023,17 @@
               "EndOffset": 75,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 168
+              "Hits": 180
             }
           ]
         },
         "System.Collections.Generic.IEnumerable`1<System.String> Internal.Microsoft.Extensions.DependencyModel.DependencyContextExtensions::SelectAssets(System.Collections.Generic.IEnumerable`1<System.String>,System.Collections.Generic.IEnumerable`1<Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup>)": {
           "Lines": {
-            "143": 4318,
-            "145": 2576,
-            "146": 1996,
+            "143": 4630,
+            "145": 2816,
+            "146": 2140,
             "148": 10,
-            "153": 158,
+            "153": 170,
             "154": 10
           },
           "Branches": [
@@ -32043,7 +32043,7 @@
               "EndOffset": 9,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 1996
+              "Hits": 2140
             },
             {
               "Line": 146,
@@ -32059,7 +32059,7 @@
               "EndOffset": 58,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 2154
+              "Hits": 2310
             },
             {
               "Line": 143,
@@ -32067,7 +32067,7 @@
               "EndOffset": 66,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 158
+              "Hits": 170
             }
           ]
         }
@@ -32578,8 +32578,8 @@
         "Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader/Target Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader::ReadTarget(System.String,Xunit.JsonObject)": {
           "Lines": {
             "203": 6,
-            "205": 642,
-            "206": 315,
+            "205": 690,
+            "206": 339,
             "208": 6
           },
           "Branches": [
@@ -32589,7 +32589,7 @@
               "EndOffset": 20,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 205,
@@ -32603,24 +32603,24 @@
         },
         "Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader/TargetLibrary Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader::ReadTargetLibrary(System.String,Xunit.JsonObject)": {
           "Lines": {
-            "223": 315,
-            "224": 315,
-            "225": 315,
-            "226": 315,
-            "227": 315,
-            "228": 315,
-            "229": 315,
-            "231": 315,
-            "232": 315,
-            "233": 315,
-            "234": 315,
-            "235": 315,
-            "236": 315,
-            "237": 315,
-            "238": 315,
-            "239": 315,
-            "240": 315,
-            "241": 315
+            "223": 339,
+            "224": 339,
+            "225": 339,
+            "226": 339,
+            "227": 339,
+            "228": 339,
+            "229": 339,
+            "231": 339,
+            "232": 339,
+            "233": 339,
+            "234": 339,
+            "235": 339,
+            "236": 339,
+            "237": 339,
+            "238": 339,
+            "239": 339,
+            "240": 339,
+            "241": 339
           },
           "Branches": [
             {
@@ -32629,7 +32629,7 @@
               "EndOffset": 32,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 258
+              "Hits": 266
             },
             {
               "Line": 224,
@@ -32637,7 +32637,7 @@
               "EndOffset": 36,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 57
+              "Hits": 73
             },
             {
               "Line": 225,
@@ -32645,7 +32645,7 @@
               "EndOffset": 56,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 313
+              "Hits": 337
             },
             {
               "Line": 225,
@@ -32661,7 +32661,7 @@
               "EndOffset": 80,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 226,
@@ -32685,7 +32685,7 @@
               "EndOffset": 169,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 231,
@@ -32693,7 +32693,7 @@
               "EndOffset": 179,
               "Path": 0,
               "Ordinal": 8,
-              "Hits": 258
+              "Hits": 266
             },
             {
               "Line": 231,
@@ -32701,7 +32701,7 @@
               "EndOffset": 182,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 57
+              "Hits": 73
             },
             {
               "Line": 231,
@@ -32709,7 +32709,7 @@
               "EndOffset": 198,
               "Path": 0,
               "Ordinal": 10,
-              "Hits": 313
+              "Hits": 337
             },
             {
               "Line": 231,
@@ -32725,7 +32725,7 @@
               "EndOffset": 217,
               "Path": 0,
               "Ordinal": 12,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 231,
@@ -32739,11 +32739,11 @@
         },
         "System.Collections.Generic.IEnumerable`1<Internal.Microsoft.Extensions.DependencyModel.Dependency> Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader::ReadTargetLibraryDependencies(Xunit.JsonObject)": {
           "Lines": {
-            "248": 315,
-            "250": 315,
-            "251": 3484,
-            "252": 1467,
-            "254": 315
+            "248": 339,
+            "250": 339,
+            "251": 3716,
+            "252": 1571,
+            "254": 339
           },
           "Branches": [
             {
@@ -32752,7 +32752,7 @@
               "EndOffset": 9,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 275
+              "Hits": 287
             },
             {
               "Line": 251,
@@ -32760,7 +32760,7 @@
               "EndOffset": 23,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 1467
+              "Hits": 1571
             },
             {
               "Line": 251,
@@ -32768,7 +32768,7 @@
               "EndOffset": 74,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 275
+              "Hits": 287
             },
             {
               "Line": 250,
@@ -32776,14 +32776,14 @@
               "EndOffset": 86,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 315
+              "Hits": 339
             }
           ]
         },
         "System.Collections.Generic.List`1<Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader/RuntimeTargetEntryStub> Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader::ReadTargetLibraryRuntimeTargets(Xunit.JsonObject)": {
           "Lines": {
-            "261": 315,
-            "263": 315,
+            "261": 339,
+            "263": 339,
             "265": 128,
             "267": 44,
             "269": 44,
@@ -32792,7 +32792,7 @@
             "272": 44,
             "273": 44,
             "274": 44,
-            "278": 315
+            "278": 339
           },
           "Branches": [
             {
@@ -32857,19 +32857,19 @@
               "EndOffset": 155,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 315
+              "Hits": 339
             }
           ]
         },
         "System.Collections.Generic.List`1<Internal.Microsoft.Extensions.DependencyModel.ResourceAssembly> Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader::ReadTargetLibraryResources(Xunit.JsonObject)": {
           "Lines": {
-            "285": 315,
-            "287": 315,
+            "285": 339,
+            "287": 339,
             "289": 536,
             "291": 260,
             "293": 260,
             "294": 260,
-            "298": 315
+            "298": 339
           },
           "Branches": [
             {
@@ -32934,7 +32934,7 @@
               "EndOffset": 102,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 315
+              "Hits": 339
             }
           ]
         },
@@ -32942,8 +32942,8 @@
           "Lines": {
             "305": 5,
             "307": 5,
-            "308": 640,
-            "309": 315,
+            "308": 688,
+            "309": 339,
             "311": 5
           },
           "Branches": [
@@ -32961,7 +32961,7 @@
               "EndOffset": 23,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 308,
@@ -32983,21 +32983,21 @@
         },
         "Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader/LibraryStub Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader::ReadLibrary(Xunit.JsonObject)": {
           "Lines": {
-            "325": 315,
-            "326": 315,
-            "327": 315,
-            "328": 315,
-            "329": 315,
-            "330": 315,
-            "332": 315,
-            "333": 315,
-            "334": 315,
-            "335": 315,
-            "336": 315,
-            "337": 315,
-            "338": 315,
-            "339": 315,
-            "340": 315
+            "325": 339,
+            "326": 339,
+            "327": 339,
+            "328": 339,
+            "329": 339,
+            "330": 339,
+            "332": 339,
+            "333": 339,
+            "334": 339,
+            "335": 339,
+            "336": 339,
+            "337": 339,
+            "338": 339,
+            "339": 339,
+            "340": 339
           },
           "Branches": []
         },
@@ -33064,8 +33064,8 @@
           "Lines": {
             "358": 10,
             "359": 0,
-            "361": 633,
-            "362": 633
+            "361": 681,
+            "362": 681
           },
           "Branches": [
             {
@@ -33104,20 +33104,20 @@
         },
         "Internal.Microsoft.Extensions.DependencyModel.Library Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader::CreateLibrary(Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader/TargetLibrary,System.Boolean,System.Collections.Generic.Dictionary`2<System.String,Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader/LibraryStub>)": {
           "Lines": {
-            "367": 623,
-            "370": 623,
+            "367": 671,
+            "370": 671,
             "372": 0,
-            "375": 623,
-            "377": 623,
-            "378": 623,
-            "380": 623,
-            "383": 315,
-            "384": 315,
+            "375": 671,
+            "377": 671,
+            "378": 671,
+            "380": 671,
+            "383": 339,
+            "384": 339,
             "386": 0,
-            "389": 315,
-            "390": 315,
-            "391": 315,
-            "393": 762,
+            "389": 339,
+            "390": 339,
+            "391": 339,
+            "393": 810,
             "395": 44,
             "396": 88,
             "397": 88,
@@ -33134,34 +33134,34 @@
             "414": 0,
             "415": 0,
             "416": 0,
-            "421": 315,
-            "423": 57,
-            "426": 315,
+            "421": 339,
+            "423": 73,
+            "426": 339,
             "428": 2,
-            "431": 315,
-            "432": 315,
-            "433": 315,
-            "434": 315,
-            "435": 315,
-            "436": 315,
-            "437": 315,
-            "438": 315,
-            "439": 315,
-            "440": 315,
-            "441": 315,
-            "442": 315,
-            "443": 315,
-            "447": 308,
-            "448": 308,
-            "449": 308,
-            "450": 308,
-            "451": 308,
-            "452": 308,
-            "453": 308,
-            "454": 308,
-            "455": 308,
-            "456": 308,
-            "457": 308
+            "431": 339,
+            "432": 339,
+            "433": 339,
+            "434": 339,
+            "435": 339,
+            "436": 339,
+            "437": 339,
+            "438": 339,
+            "439": 339,
+            "440": 339,
+            "441": 339,
+            "442": 339,
+            "443": 339,
+            "447": 332,
+            "448": 332,
+            "449": 332,
+            "450": 332,
+            "451": 332,
+            "452": 332,
+            "453": 332,
+            "454": 332,
+            "455": 332,
+            "456": 332,
+            "457": 332
           },
           "Branches": [
             {
@@ -33170,7 +33170,7 @@
               "EndOffset": 10,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 623
+              "Hits": 671
             },
             {
               "Line": 370,
@@ -33194,7 +33194,7 @@
               "EndOffset": 38,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 623
+              "Hits": 671
             },
             {
               "Line": 380,
@@ -33202,7 +33202,7 @@
               "EndOffset": 85,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 384,
@@ -33210,7 +33210,7 @@
               "EndOffset": 107,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 384,
@@ -33234,7 +33234,7 @@
               "EndOffset": 121,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 391,
@@ -33242,7 +33242,7 @@
               "EndOffset": 146,
               "Path": 0,
               "Ordinal": 10,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 393,
@@ -33258,7 +33258,7 @@
               "EndOffset": 183,
               "Path": 1,
               "Ordinal": 13,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 393,
@@ -33394,7 +33394,7 @@
               "EndOffset": 503,
               "Path": 1,
               "Ordinal": 27,
-              "Hits": 359
+              "Hits": 383
             },
             {
               "Line": 393,
@@ -33402,7 +33402,7 @@
               "EndOffset": 515,
               "Path": 0,
               "Ordinal": 30,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 391,
@@ -33410,7 +33410,7 @@
               "EndOffset": 529,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 421,
@@ -33418,7 +33418,7 @@
               "EndOffset": 537,
               "Path": 0,
               "Ordinal": 32,
-              "Hits": 57
+              "Hits": 73
             },
             {
               "Line": 421,
@@ -33426,7 +33426,7 @@
               "EndOffset": 551,
               "Path": 0,
               "Ordinal": 34,
-              "Hits": 57
+              "Hits": 73
             },
             {
               "Line": 421,
@@ -33434,7 +33434,7 @@
               "EndOffset": 574,
               "Path": 1,
               "Ordinal": 33,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 421,
@@ -33442,7 +33442,7 @@
               "EndOffset": 574,
               "Path": 1,
               "Ordinal": 35,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 426,
@@ -33466,7 +33466,7 @@
               "EndOffset": 619,
               "Path": 1,
               "Ordinal": 37,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 426,
@@ -33474,7 +33474,7 @@
               "EndOffset": 619,
               "Path": 1,
               "Ordinal": 39,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 431,
@@ -33490,7 +33490,7 @@
               "EndOffset": 657,
               "Path": 1,
               "Ordinal": 41,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 380,
@@ -33498,7 +33498,7 @@
               "EndOffset": 693,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 308
+              "Hits": 332
             },
             {
               "Line": 447,
@@ -33506,7 +33506,7 @@
               "EndOffset": 701,
               "Path": 0,
               "Ordinal": 42,
-              "Hits": 308
+              "Hits": 332
             },
             {
               "Line": 447,
@@ -33520,12 +33520,12 @@
         },
         "System.String Internal.Microsoft.Extensions.DependencyModel.DependencyContextJsonReader::Pool(System.String)": {
           "Lines": {
-            "463": 5158,
+            "463": 5510,
             "465": 0,
-            "469": 5158,
-            "471": 785,
-            "472": 785,
-            "474": 5158
+            "469": 5510,
+            "471": 857,
+            "472": 857,
+            "474": 5510
           },
           "Branches": [
             {
@@ -33542,7 +33542,7 @@
               "EndOffset": 5,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 5158
+              "Hits": 5510
             },
             {
               "Line": 469,
@@ -33550,7 +33550,7 @@
               "EndOffset": 21,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 785
+              "Hits": 857
             },
             {
               "Line": 469,
@@ -33558,7 +33558,7 @@
               "EndOffset": 36,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 5158
+              "Hits": 5510
             }
           ]
         },
@@ -34105,7 +34105,7 @@
         },
         "System.String Internal.Microsoft.Extensions.DependencyModel.Library::get_Name()": {
           "Lines": {
-            "74": 1542
+            "74": 1662
           },
           "Branches": []
         },
@@ -34160,40 +34160,40 @@
         },
         "System.Void Internal.Microsoft.Extensions.DependencyModel.Library::.ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable`1<Internal.Microsoft.Extensions.DependencyModel.Dependency>,System.Boolean,System.String,System.String)": {
           "Lines": {
-            "32": 308,
-            "34": 308
+            "32": 332,
+            "34": 332
           },
           "Branches": []
         },
         "System.Void Internal.Microsoft.Extensions.DependencyModel.Library::.ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable`1<Internal.Microsoft.Extensions.DependencyModel.Dependency>,System.Boolean,System.String,System.String,System.String)": {
           "Lines": {
-            "35": 623,
-            "36": 623,
-            "37": 623,
-            "38": 623,
-            "39": 623,
-            "40": 623,
-            "41": 623,
-            "42": 623,
-            "43": 623,
-            "45": 623,
+            "35": 671,
+            "36": 671,
+            "37": 671,
+            "38": 671,
+            "39": 671,
+            "40": 671,
+            "41": 671,
+            "42": 671,
+            "43": 671,
+            "45": 671,
             "47": 0,
-            "49": 623,
+            "49": 671,
             "51": 0,
-            "53": 623,
+            "53": 671,
             "55": 0,
-            "57": 623,
+            "57": 671,
             "59": 0,
-            "61": 623,
-            "62": 623,
-            "63": 623,
-            "64": 623,
-            "65": 623,
-            "66": 623,
-            "67": 623,
-            "68": 623,
-            "69": 623,
-            "70": 623
+            "61": 671,
+            "62": 671,
+            "63": 671,
+            "64": 671,
+            "65": 671,
+            "66": 671,
+            "67": 671,
+            "68": 671,
+            "69": 671,
+            "70": 671
           },
           "Branches": [
             {
@@ -34210,7 +34210,7 @@
               "EndOffset": 25,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 623
+              "Hits": 671
             },
             {
               "Line": 49,
@@ -34226,7 +34226,7 @@
               "EndOffset": 44,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 623
+              "Hits": 671
             },
             {
               "Line": 53,
@@ -34242,7 +34242,7 @@
               "EndOffset": 63,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 623
+              "Hits": 671
             },
             {
               "Line": 57,
@@ -34258,7 +34258,7 @@
               "EndOffset": 78,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 623
+              "Hits": 671
             }
           ]
         }
@@ -34436,13 +34436,13 @@
       "Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup": {
         "System.String Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup::get_Runtime()": {
           "Lines": {
-            "24": 610
+            "24": 714
           },
           "Branches": []
         },
         "System.Collections.Generic.IReadOnlyList`1<System.String> Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup::get_AssetPaths()": {
           "Lines": {
-            "29": 40
+            "29": 48
           },
           "Branches": []
         },
@@ -34454,10 +34454,10 @@
         },
         "System.Void Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup::.ctor(System.String,System.Collections.Generic.IEnumerable`1<System.String>)": {
           "Lines": {
-            "15": 103,
-            "17": 103,
-            "18": 103,
-            "19": 103
+            "15": 119,
+            "17": 119,
+            "18": 119,
+            "19": 119
           },
           "Branches": []
         }
@@ -34467,13 +34467,13 @@
       "Internal.Microsoft.Extensions.DependencyModel.RuntimeFallbacks": {
         "System.String Internal.Microsoft.Extensions.DependencyModel.RuntimeFallbacks::get_Runtime()": {
           "Lines": {
-            "14": 4275
+            "14": 4575
           },
           "Branches": []
         },
         "System.Collections.Generic.IReadOnlyList`1<System.String> Internal.Microsoft.Extensions.DependencyModel.RuntimeFallbacks::get_Fallbacks()": {
           "Lines": {
-            "15": 243
+            "15": 255
           },
           "Branches": []
         },
@@ -34535,7 +34535,7 @@
       "Internal.Microsoft.Extensions.DependencyModel.RuntimeLibrary": {
         "System.Collections.Generic.IReadOnlyList`1<Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup> Internal.Microsoft.Extensions.DependencyModel.RuntimeLibrary::get_RuntimeAssemblyGroups()": {
           "Lines": {
-            "102": 168
+            "102": 180
           },
           "Branches": []
         },
@@ -34588,25 +34588,25 @@
         },
         "System.Void Internal.Microsoft.Extensions.DependencyModel.RuntimeLibrary::.ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList`1<Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup>,System.Collections.Generic.IReadOnlyList`1<Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup>,System.Collections.Generic.IEnumerable`1<Internal.Microsoft.Extensions.DependencyModel.ResourceAssembly>,System.Collections.Generic.IEnumerable`1<Internal.Microsoft.Extensions.DependencyModel.Dependency>,System.Boolean,System.String,System.String,System.String)": {
           "Lines": {
-            "75": 315,
-            "76": 315,
-            "77": 315,
-            "78": 315,
-            "79": 315,
-            "80": 315,
-            "81": 315,
-            "82": 315,
-            "83": 315,
-            "85": 315,
+            "75": 339,
+            "76": 339,
+            "77": 339,
+            "78": 339,
+            "79": 339,
+            "80": 339,
+            "81": 339,
+            "82": 339,
+            "83": 339,
+            "85": 339,
             "87": 0,
-            "89": 315,
+            "89": 339,
             "91": 0,
-            "93": 315,
+            "93": 339,
             "95": 0,
-            "97": 315,
-            "98": 315,
-            "99": 315,
-            "100": 315
+            "97": 339,
+            "98": 339,
+            "99": 339,
+            "100": 339
           },
           "Branches": [
             {
@@ -34623,7 +34623,7 @@
               "EndOffset": 36,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 89,
@@ -34639,7 +34639,7 @@
               "EndOffset": 51,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 93,
@@ -34655,7 +34655,7 @@
               "EndOffset": 66,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 315
+              "Hits": 339
             }
           ]
         }
@@ -36969,7 +36969,7 @@
         },
         "System.Collections.Generic.IEnumerable`1<System.String> System.Collections.Generic.CollectionExtensions::GetDefaultAssets(System.Collections.Generic.IEnumerable`1<Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup>)": {
           "Lines": {
-            "25": 158
+            "25": 170
           },
           "Branches": []
         },
@@ -37000,9 +37000,9 @@
         },
         "System.Collections.Generic.IEnumerable`1<System.String> System.Collections.Generic.CollectionExtensions::GetAssets(System.Collections.Generic.IEnumerable`1<Internal.Microsoft.Extensions.DependencyModel.RuntimeAssetGroup>,System.String)": {
           "Lines": {
-            "37": 158,
-            "38": 188,
-            "39": 188
+            "37": 170,
+            "38": 208,
+            "39": 208
           },
           "Branches": [
             {
@@ -37019,7 +37019,7 @@
               "EndOffset": 62,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 158
+              "Hits": 170
             }
           ]
         }
@@ -37302,7 +37302,7 @@
       "Xunit.JsonBoolean": {
         "System.Boolean Xunit.JsonBoolean::get_Value()": {
           "Lines": {
-            "54": 630
+            "54": 678
           },
           "Branches": []
         },
@@ -37314,10 +37314,10 @@
         },
         "System.Void Xunit.JsonBoolean::.ctor(Xunit.JsonToken)": {
           "Lines": {
-            "38": 315,
-            "40": 315,
-            "42": 303,
-            "43": 303,
+            "38": 339,
+            "40": 339,
+            "42": 327,
+            "43": 327,
             "44": 12,
             "46": 12,
             "47": 12,
@@ -37330,7 +37330,7 @@
               "EndOffset": 27,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 303
+              "Hits": 327
             },
             {
               "Line": 40,
@@ -37362,40 +37362,40 @@
       "Xunit.JsonBuffer": {
         "Xunit.JsonToken Xunit.JsonBuffer::Read()": {
           "Lines": {
-            "86": 92716,
-            "88": 92716,
+            "86": 97808,
+            "88": 97808,
             "90": 5,
             "91": 5,
-            "93": 92711,
-            "99": 23849,
-            "100": 23849,
-            "101": 23849,
-            "103": 23849,
-            "105": 1615,
-            "106": 1615,
-            "107": 22234,
-            "109": 1615,
-            "110": 1615,
-            "111": 20619,
+            "93": 97803,
+            "99": 25249,
+            "100": 25249,
+            "101": 25249,
+            "103": 25249,
+            "105": 1707,
+            "106": 1707,
+            "107": 23542,
+            "109": 1707,
+            "110": 1707,
+            "111": 21835,
             "113": 75,
             "114": 75,
-            "115": 20544,
+            "115": 21760,
             "117": 75,
             "118": 75,
-            "119": 20469,
-            "121": 5552,
-            "122": 5552,
-            "123": 14917,
-            "125": 4698,
-            "126": 4698,
-            "127": 10219,
-            "129": 9904,
-            "130": 9904,
-            "131": 9904,
-            "132": 315,
-            "134": 303,
-            "135": 303,
-            "136": 303,
+            "119": 21685,
+            "121": 5900,
+            "122": 5900,
+            "123": 15785,
+            "125": 4962,
+            "126": 4962,
+            "127": 10823,
+            "129": 10484,
+            "130": 10484,
+            "131": 10484,
+            "132": 339,
+            "134": 327,
+            "135": 327,
+            "136": 327,
             "137": 12,
             "139": 12,
             "140": 12,
@@ -37411,7 +37411,7 @@
             "154": 0,
             "155": 0,
             "156": 0,
-            "160": 23849
+            "160": 25249
           },
           "Branches": [
             {
@@ -37420,7 +37420,7 @@
               "EndOffset": 0,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 92716
+              "Hits": 97808
             },
             {
               "Line": 88,
@@ -37436,7 +37436,7 @@
               "EndOffset": 31,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 92711
+              "Hits": 97803
             },
             {
               "Line": 93,
@@ -37444,7 +37444,7 @@
               "EndOffset": 39,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 23849
+              "Hits": 25249
             },
             {
               "Line": 103,
@@ -37452,7 +37452,7 @@
               "EndOffset": 99,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 1615
+              "Hits": 1707
             },
             {
               "Line": 103,
@@ -37460,7 +37460,7 @@
               "EndOffset": 116,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 22234
+              "Hits": 23542
             },
             {
               "Line": 107,
@@ -37468,7 +37468,7 @@
               "EndOffset": 121,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 1615
+              "Hits": 1707
             },
             {
               "Line": 107,
@@ -37476,7 +37476,7 @@
               "EndOffset": 138,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 20619
+              "Hits": 21835
             },
             {
               "Line": 111,
@@ -37492,7 +37492,7 @@
               "EndOffset": 160,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 20544
+              "Hits": 21760
             },
             {
               "Line": 115,
@@ -37508,7 +37508,7 @@
               "EndOffset": 182,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 20469
+              "Hits": 21685
             },
             {
               "Line": 119,
@@ -37516,7 +37516,7 @@
               "EndOffset": 187,
               "Path": 0,
               "Ordinal": 12,
-              "Hits": 5552
+              "Hits": 5900
             },
             {
               "Line": 119,
@@ -37524,7 +37524,7 @@
               "EndOffset": 204,
               "Path": 1,
               "Ordinal": 13,
-              "Hits": 14917
+              "Hits": 15785
             },
             {
               "Line": 123,
@@ -37532,7 +37532,7 @@
               "EndOffset": 209,
               "Path": 0,
               "Ordinal": 14,
-              "Hits": 4698
+              "Hits": 4962
             },
             {
               "Line": 123,
@@ -37540,7 +37540,7 @@
               "EndOffset": 226,
               "Path": 1,
               "Ordinal": 15,
-              "Hits": 10219
+              "Hits": 10823
             },
             {
               "Line": 127,
@@ -37548,7 +37548,7 @@
               "EndOffset": 231,
               "Path": 0,
               "Ordinal": 16,
-              "Hits": 9904
+              "Hits": 10484
             },
             {
               "Line": 127,
@@ -37556,7 +37556,7 @@
               "EndOffset": 266,
               "Path": 1,
               "Ordinal": 17,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 132,
@@ -37564,7 +37564,7 @@
               "EndOffset": 271,
               "Path": 0,
               "Ordinal": 18,
-              "Hits": 303
+              "Hits": 327
             },
             {
               "Line": 132,
@@ -37658,14 +37658,14 @@
         },
         "System.Int32 Xunit.JsonBuffer::ReadNextChar()": {
           "Lines": {
-            "167": 307577,
-            "168": 307577,
-            "169": 307577,
+            "167": 323353,
+            "168": 323353,
+            "169": 323353,
             "173": 5,
-            "177": 8006,
-            "178": 8006,
-            "180": 8006,
-            "185": 291560
+            "177": 8438,
+            "178": 8438,
+            "180": 8438,
+            "185": 306472
           },
           "Branches": [
             {
@@ -37674,7 +37674,7 @@
               "EndOffset": 0,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 307577
+              "Hits": 323353
             },
             {
               "Line": 169,
@@ -37682,7 +37682,7 @@
               "EndOffset": 30,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 307572
+              "Hits": 323348
             },
             {
               "Line": 169,
@@ -37690,7 +37690,7 @@
               "EndOffset": 35,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 299566
+              "Hits": 314910
             },
             {
               "Line": 169,
@@ -37706,7 +37706,7 @@
               "EndOffset": 44,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 8006
+              "Hits": 8438
             },
             {
               "Line": 169,
@@ -37714,7 +37714,7 @@
               "EndOffset": 67,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 291560
+              "Hits": 306472
             }
           ]
         },
@@ -37816,24 +37816,24 @@
         },
         "System.Void Xunit.JsonBuffer::ReadLiteral(System.String)": {
           "Lines": {
-            "221": 2544,
-            "223": 957,
-            "224": 957,
+            "221": 2736,
+            "223": 1029,
+            "224": 1029,
             "226": 0,
             "227": 0,
             "228": 0,
-            "232": 957,
-            "236": 315,
-            "237": 315,
-            "238": 315,
-            "239": 315,
-            "240": 315,
-            "241": 315,
-            "242": 315,
+            "232": 1029,
+            "236": 339,
+            "237": 339,
+            "238": 339,
+            "239": 339,
+            "240": 339,
+            "241": 339,
+            "242": 339,
             "244": 0,
             "245": 0,
             "246": 0,
-            "248": 315
+            "248": 339
           },
           "Branches": [
             {
@@ -37842,7 +37842,7 @@
               "EndOffset": 4,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 957
+              "Hits": 1029
             },
             {
               "Line": 224,
@@ -37858,7 +37858,7 @@
               "EndOffset": 48,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 957
+              "Hits": 1029
             },
             {
               "Line": 221,
@@ -37866,7 +37866,7 @@
               "EndOffset": 68,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 237,
@@ -37874,7 +37874,7 @@
               "EndOffset": 85,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 237,
@@ -37882,7 +37882,7 @@
               "EndOffset": 90,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 237,
@@ -37922,7 +37922,7 @@
               "EndOffset": 137,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 237,
@@ -37930,7 +37930,7 @@
               "EndOffset": 137,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 237,
@@ -37938,7 +37938,7 @@
               "EndOffset": 137,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 237,
@@ -37946,7 +37946,7 @@
               "EndOffset": 137,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 237,
@@ -37954,7 +37954,7 @@
               "EndOffset": 137,
               "Path": 1,
               "Ordinal": 13,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 237,
@@ -37962,21 +37962,21 @@
               "EndOffset": 137,
               "Path": 1,
               "Ordinal": 15,
-              "Hits": 315
+              "Hits": 339
             }
           ]
         },
         "System.String Xunit.JsonBuffer::ReadString()": {
           "Lines": {
-            "255": 9904,
-            "257": 9904,
-            "259": 187988,
-            "261": 197892,
-            "263": 197892,
+            "255": 10484,
+            "257": 10484,
+            "259": 197156,
+            "261": 207640,
+            "263": 207640,
             "265": 0,
             "266": 0,
             "267": 0,
-            "269": 197892,
+            "269": 207640,
             "271": 0,
             "273": 0,
             "274": 0,
@@ -38022,12 +38022,12 @@
             "346": 0,
             "349": 0,
             "350": 0,
-            "351": 197892,
+            "351": 207640,
             "353": 0,
             "354": 0,
-            "355": 197892,
-            "361": 187988,
-            "365": 9904
+            "355": 207640,
+            "361": 197156,
+            "365": 10484
           },
           "Branches": [
             {
@@ -38036,7 +38036,7 @@
               "EndOffset": 25,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 197892
+              "Hits": 207640
             },
             {
               "Line": 263,
@@ -38060,7 +38060,7 @@
               "EndOffset": 53,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 197892
+              "Hits": 207640
             },
             {
               "Line": 269,
@@ -38252,7 +38252,7 @@
               "EndOffset": 426,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 197892
+              "Hits": 207640
             },
             {
               "Line": 351,
@@ -38268,7 +38268,7 @@
               "EndOffset": 438,
               "Path": 1,
               "Ordinal": 29,
-              "Hits": 197892
+              "Hits": 207640
             },
             {
               "Line": 355,
@@ -38276,7 +38276,7 @@
               "EndOffset": 443,
               "Path": 0,
               "Ordinal": 30,
-              "Hits": 187988
+              "Hits": 197156
             },
             {
               "Line": 355,
@@ -38284,13 +38284,13 @@
               "EndOffset": 462,
               "Path": 1,
               "Ordinal": 31,
-              "Hits": 9904
+              "Hits": 10484
             }
           ]
         },
         "System.Boolean Xunit.JsonBuffer::IsWhitespace(System.Int32)": {
           "Lines": {
-            "370": 92711
+            "370": 97803
           },
           "Branches": [
             {
@@ -38299,7 +38299,7 @@
               "EndOffset": 5,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 23849
+              "Hits": 25249
             },
             {
               "Line": 370,
@@ -38307,7 +38307,7 @@
               "EndOffset": 10,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 23849
+              "Hits": 25249
             },
             {
               "Line": 370,
@@ -38315,7 +38315,7 @@
               "EndOffset": 16,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 68862
+              "Hits": 72554
             },
             {
               "Line": 370,
@@ -38323,7 +38323,7 @@
               "EndOffset": 16,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 68862
+              "Hits": 72554
             }
           ]
         },
@@ -38390,16 +38390,16 @@
         },
         "Xunit.JsonValue Xunit.JsonDeserializer::DeserializeInternal(Xunit.JsonToken,Xunit.JsonBuffer)": {
           "Lines": {
-            "401": 6357,
+            "401": 6705,
             "403": 0,
-            "406": 6357,
+            "406": 6705,
             "408": 75,
-            "411": 6282,
-            "413": 1615,
-            "416": 4667,
-            "418": 4352,
-            "421": 315,
-            "423": 315,
+            "411": 6630,
+            "413": 1707,
+            "416": 4923,
+            "418": 4584,
+            "421": 339,
+            "423": 339,
             "426": 0,
             "428": 0,
             "431": 0,
@@ -38423,7 +38423,7 @@
               "EndOffset": 12,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 6357
+              "Hits": 6705
             },
             {
               "Line": 406,
@@ -38439,7 +38439,7 @@
               "EndOffset": 29,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 6282
+              "Hits": 6630
             },
             {
               "Line": 411,
@@ -38447,7 +38447,7 @@
               "EndOffset": 37,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 1615
+              "Hits": 1707
             },
             {
               "Line": 411,
@@ -38455,7 +38455,7 @@
               "EndOffset": 45,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 4667
+              "Hits": 4923
             },
             {
               "Line": 416,
@@ -38463,7 +38463,7 @@
               "EndOffset": 55,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 4352
+              "Hits": 4584
             },
             {
               "Line": 416,
@@ -38471,7 +38471,7 @@
               "EndOffset": 79,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 421,
@@ -38487,7 +38487,7 @@
               "EndOffset": 97,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 421,
@@ -38495,7 +38495,7 @@
               "EndOffset": 97,
               "Path": 0,
               "Ordinal": 10,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 421,
@@ -38626,39 +38626,39 @@
         },
         "Xunit.JsonObject Xunit.JsonDeserializer::DeserializeObject(Xunit.JsonToken,Xunit.JsonBuffer)": {
           "Lines": {
-            "478": 1615,
-            "483": 5588,
-            "484": 5588,
+            "478": 1707,
+            "483": 5944,
+            "484": 5944,
             "486": 0,
             "487": 0,
             "488": 0,
-            "491": 5588,
+            "491": 5944,
             "493": 0,
             "494": 0,
             "495": 0,
-            "497": 5588,
-            "503": 5552,
+            "497": 5944,
+            "503": 5900,
             "505": 0,
             "506": 0,
             "507": 0,
-            "510": 5552,
-            "511": 5552,
+            "510": 5900,
+            "511": 5900,
             "513": 0,
             "514": 0,
             "515": 0,
-            "518": 5552,
-            "519": 5552,
+            "518": 5900,
+            "519": 5900,
             "521": 0,
             "522": 0,
             "523": 0,
-            "526": 5552,
-            "528": 5552,
-            "529": 5552,
-            "533": 3973,
+            "526": 5900,
+            "528": 5900,
+            "529": 5900,
+            "533": 4237,
             "535": 0,
             "536": 0,
             "537": 0,
-            "542": 1615
+            "542": 1707
           },
           "Branches": [
             {
@@ -38667,7 +38667,7 @@
               "EndOffset": 6,
               "Path": 1,
               "Ordinal": 15,
-              "Hits": 5588
+              "Hits": 5944
             },
             {
               "Line": 484,
@@ -38683,7 +38683,7 @@
               "EndOffset": 42,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 5588
+              "Hits": 5944
             },
             {
               "Line": 491,
@@ -38699,7 +38699,7 @@
               "EndOffset": 70,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 5588
+              "Hits": 5944
             },
             {
               "Line": 497,
@@ -38707,7 +38707,7 @@
               "EndOffset": 82,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 5552
+              "Hits": 5900
             },
             {
               "Line": 503,
@@ -38723,7 +38723,7 @@
               "EndOffset": 114,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 5552
+              "Hits": 5900
             },
             {
               "Line": 511,
@@ -38739,7 +38739,7 @@
               "EndOffset": 143,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 5552
+              "Hits": 5900
             },
             {
               "Line": 519,
@@ -38755,7 +38755,7 @@
               "EndOffset": 178,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 5552
+              "Hits": 5900
             },
             {
               "Line": 529,
@@ -38763,7 +38763,7 @@
               "EndOffset": 213,
               "Path": 0,
               "Ordinal": 12,
-              "Hits": 3973
+              "Hits": 4237
             },
             {
               "Line": 533,
@@ -38779,7 +38779,7 @@
               "EndOffset": 246,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 1615
+              "Hits": 1707
             },
             {
               "Line": 529,
@@ -38787,7 +38787,7 @@
               "EndOffset": 246,
               "Path": 1,
               "Ordinal": 13,
-              "Hits": 1615
+              "Hits": 1707
             }
           ]
         }
@@ -38985,15 +38985,15 @@
       "Xunit.JsonObject": {
         "System.Collections.Generic.ICollection`1<System.String> Xunit.JsonObject::get_Keys()": {
           "Lines": {
-            "729": 379
+            "729": 407
           },
           "Branches": []
         },
         "Xunit.JsonValue Xunit.JsonObject::Value(System.String)": {
           "Lines": {
-            "735": 7020,
-            "737": 2250,
-            "740": 7020
+            "735": 7484,
+            "737": 2414,
+            "740": 7484
           },
           "Branches": [
             {
@@ -39002,7 +39002,7 @@
               "EndOffset": 16,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 2250
+              "Hits": 2414
             },
             {
               "Line": 735,
@@ -39010,19 +39010,19 @@
               "EndOffset": 18,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 7020
+              "Hits": 7484
             }
           ]
         },
         "Xunit.JsonObject Xunit.JsonObject::ValueAsJsonObject(System.String)": {
           "Lines": {
-            "745": 2855
+            "745": 3047
           },
           "Branches": []
         },
         "Xunit.JsonString Xunit.JsonObject::ValueAsString(System.String)": {
           "Lines": {
-            "750": 3420
+            "750": 3644
           },
           "Branches": []
         },
@@ -39054,9 +39054,9 @@
         },
         "System.Boolean Xunit.JsonObject::ValueAsBoolean(System.String,System.Boolean)": {
           "Lines": {
-            "765": 315,
-            "766": 315,
-            "768": 315,
+            "765": 339,
+            "766": 339,
+            "768": 339,
             "771": 0
           },
           "Branches": [
@@ -39066,7 +39066,7 @@
               "EndOffset": 16,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 315
+              "Hits": 339
             },
             {
               "Line": 766,
@@ -39080,10 +39080,10 @@
         },
         "System.Nullable`1<System.Boolean> Xunit.JsonObject::ValueAsNullableBoolean(System.String)": {
           "Lines": {
-            "776": 350,
-            "777": 350,
+            "776": 374,
+            "777": 374,
             "779": 0,
-            "782": 350
+            "782": 374
           },
           "Branches": [
             {
@@ -39100,7 +39100,7 @@
               "EndOffset": 28,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 350
+              "Hits": 374
             }
           ]
         },
@@ -39168,11 +39168,11 @@
         },
         "System.Void Xunit.JsonObject::.ctor(System.Collections.Generic.IDictionary`2<System.String,Xunit.JsonValue>,System.Int32,System.Int32)": {
           "Lines": {
-            "717": 1615,
-            "719": 1615,
+            "717": 1707,
+            "719": 1707,
             "721": 0,
-            "724": 1615,
-            "725": 1615
+            "724": 1707,
+            "725": 1707
           },
           "Branches": [
             {
@@ -39189,7 +39189,7 @@
               "EndOffset": 22,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1615
+              "Hits": 1707
             }
           ]
         }
@@ -39197,7 +39197,7 @@
       "Xunit.JsonString": {
         "System.String Xunit.JsonString::get_Value()": {
           "Lines": {
-            "822": 3057
+            "822": 3257
           },
           "Branches": []
         },
@@ -39209,9 +39209,9 @@
         },
         "System.String Xunit.JsonString::op_Implicit(Xunit.JsonString)": {
           "Lines": {
-            "832": 3420,
-            "834": 363,
-            "838": 3057
+            "832": 3644,
+            "834": 387,
+            "838": 3257
           },
           "Branches": [
             {
@@ -39220,7 +39220,7 @@
               "EndOffset": 3,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 363
+              "Hits": 387
             },
             {
               "Line": 832,
@@ -39228,17 +39228,17 @@
               "EndOffset": 5,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 3057
+              "Hits": 3257
             }
           ]
         },
         "System.Void Xunit.JsonString::.ctor(System.String,System.Int32,System.Int32)": {
           "Lines": {
-            "810": 4352,
-            "812": 4352,
+            "810": 4584,
+            "812": 4584,
             "814": 0,
-            "817": 4352,
-            "818": 4352
+            "817": 4584,
+            "818": 4584
           },
           "Branches": [
             {
@@ -39255,7 +39255,7 @@
               "EndOffset": 22,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 4352
+              "Hits": 4584
             }
           ]
         }
@@ -39275,10 +39275,10 @@
         },
         "System.Void Xunit.JsonValue::.ctor(System.Int32,System.Int32)": {
           "Lines": {
-            "869": 6357,
-            "871": 6357,
-            "872": 6357,
-            "873": 6357
+            "869": 6705,
+            "871": 6705,
+            "872": 6705,
+            "873": 6705
           },
           "Branches": []
         }
@@ -41384,23 +41384,23 @@
         },
         "Microsoft.VisualStudio.TestPlatform.ObjectModel.TestCase Xunit.Runner.VisualStudio.VsDiscoverySink::CreateVsTestCase(System.String,Xunit.TestCaseDescriptor,LoggerHelper,Xunit.Runner.VisualStudio.TestPlatformContext)": {
           "Lines": {
-            "83": 1,
-            "84": 1,
-            "86": 1,
+            "83": 3,
+            "84": 3,
+            "86": 3,
             "87": 0,
-            "89": 1,
-            "90": 1,
-            "91": 1,
-            "93": 1,
-            "95": 1,
-            "97": 2,
+            "89": 3,
+            "90": 3,
+            "91": 3,
+            "93": 3,
+            "95": 3,
+            "97": 6,
             "98": 0,
             "99": 0,
-            "102": 1,
+            "102": 3,
             "104": 0,
             "106": 0,
             "107": 0,
-            "109": 1
+            "109": 3
           },
           "Branches": [
             {
@@ -41417,7 +41417,7 @@
               "EndOffset": 77,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 93,
@@ -41425,7 +41425,7 @@
               "EndOffset": 143,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 97,
@@ -41457,7 +41457,7 @@
               "EndOffset": 248,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 93,
@@ -41465,15 +41465,15 @@
               "EndOffset": 264,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 1
+              "Hits": 3
             }
           ]
         },
         "System.String Xunit.Runner.VisualStudio.VsDiscoverySink::Escape(System.String)": {
           "Lines": {
-            "113": 1,
+            "113": 3,
             "114": 0,
-            "116": 1
+            "116": 3
           },
           "Branches": [
             {
@@ -41490,14 +41490,14 @@
               "EndOffset": 9,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 3
             }
           ]
         },
         "System.String Xunit.Runner.VisualStudio.VsDiscoverySink::Truncate(System.String)": {
           "Lines": {
-            "121": 1,
-            "122": 1,
+            "121": 3,
+            "122": 3,
             "124": 0
           },
           "Branches": [
@@ -41507,7 +41507,7 @@
               "EndOffset": 13,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 121,
@@ -41732,10 +41732,10 @@
         },
         "System.Guid Xunit.Runner.VisualStudio.VsDiscoverySink::GuidFromString(System.String)": {
           "Lines": {
-            "236": 1,
-            "237": 1,
-            "238": 1,
-            "239": 1
+            "236": 3,
+            "237": 3,
+            "238": 3,
+            "239": 3
           },
           "Branches": []
         },
@@ -41832,8 +41832,8 @@
         },
         "Microsoft.VisualStudio.TestPlatform.ObjectModel.TestCase Xunit.Runner.VisualStudio.VsExecutionSink::FindTestCase(Xunit.Abstractions.ITestCase)": {
           "Lines": {
-            "65": 3,
-            "66": 3,
+            "65": 9,
+            "66": 9,
             "68": 0,
             "69": 0
           },
@@ -41844,7 +41844,7 @@
               "EndOffset": 21,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 3
+              "Hits": 9
             },
             {
               "Line": 65,
@@ -41858,20 +41858,20 @@
         },
         "System.Void Xunit.Runner.VisualStudio.VsExecutionSink::TryAndReport(System.String,Xunit.Abstractions.ITestCase,System.Action)": {
           "Lines": {
-            "76": 3,
-            "77": 3,
+            "76": 9,
+            "77": 9,
             "78": 0,
             "80": 0,
             "81": 0,
-            "82": 3
+            "82": 9
           },
           "Branches": []
         },
         "System.Void Xunit.Runner.VisualStudio.VsExecutionSink::HandleCancellation(Xunit.MessageHandlerArgs)": {
           "Lines": {
-            "86": 4,
+            "86": 10,
             "87": 0,
-            "88": 4
+            "88": 10
           },
           "Branches": [
             {
@@ -41888,7 +41888,7 @@
               "EndOffset": 19,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 4
+              "Hits": 10
             }
           ]
         },
@@ -41948,13 +41948,13 @@
         },
         "System.Void Xunit.Runner.VisualStudio.VsExecutionSink::HandleTestPassed(Xunit.MessageHandlerArgs`1<Xunit.Abstractions.ITestPassed>)": {
           "Lines": {
-            "132": 1,
-            "133": 1,
-            "134": 1,
-            "135": 2,
+            "132": 3,
+            "133": 3,
+            "134": 3,
+            "135": 6,
             "137": 0,
-            "139": 1,
-            "140": 1
+            "139": 3,
+            "140": 3
           },
           "Branches": [
             {
@@ -41963,7 +41963,7 @@
               "EndOffset": 42,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 134,
@@ -42006,13 +42006,13 @@
         },
         "System.Void Xunit.Runner.VisualStudio.VsExecutionSink::HandleTestCaseStarting(Xunit.MessageHandlerArgs`1<Xunit.Abstractions.ITestCaseStarting>)": {
           "Lines": {
-            "156": 1,
-            "157": 1,
-            "158": 1,
-            "159": 2,
+            "156": 3,
+            "157": 3,
+            "158": 3,
+            "159": 6,
             "161": 0,
-            "163": 1,
-            "164": 1
+            "163": 3,
+            "164": 3
           },
           "Branches": [
             {
@@ -42021,7 +42021,7 @@
               "EndOffset": 46,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 158,
@@ -42035,13 +42035,13 @@
         },
         "System.Void Xunit.Runner.VisualStudio.VsExecutionSink::HandleTestCaseFinished(Xunit.MessageHandlerArgs`1<Xunit.Abstractions.ITestCaseFinished>)": {
           "Lines": {
-            "168": 1,
-            "169": 1,
-            "170": 1,
-            "171": 2,
+            "168": 3,
+            "169": 3,
+            "170": 3,
+            "171": 6,
             "173": 0,
-            "175": 1,
-            "176": 1
+            "175": 3,
+            "176": 3
           },
           "Branches": [
             {
@@ -42050,7 +42050,7 @@
               "EndOffset": 56,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 170,
@@ -42172,7 +42172,7 @@
         },
         "Microsoft.VisualStudio.TestPlatform.ObjectModel.TestResult Xunit.Runner.VisualStudio.VsExecutionSink::MakeVsTestResult(Microsoft.VisualStudio.TestPlatform.ObjectModel.TestOutcome,Xunit.Abstractions.ITestResultMessage)": {
           "Lines": {
-            "257": 1
+            "257": 3
           },
           "Branches": []
         },
@@ -42184,23 +42184,23 @@
         },
         "Microsoft.VisualStudio.TestPlatform.ObjectModel.TestResult Xunit.Runner.VisualStudio.VsExecutionSink::MakeVsTestResult(Microsoft.VisualStudio.TestPlatform.ObjectModel.TestOutcome,Xunit.Abstractions.ITestCase,System.String,System.Double,System.String)": {
           "Lines": {
-            "264": 1,
-            "265": 1,
+            "264": 3,
+            "265": 3,
             "266": 0,
-            "268": 1,
-            "269": 1,
-            "270": 1,
-            "271": 1,
-            "272": 1,
-            "273": 1,
-            "274": 1,
-            "275": 1,
-            "276": 1,
-            "279": 1,
+            "268": 3,
+            "269": 3,
+            "270": 3,
+            "271": 3,
+            "272": 3,
+            "273": 3,
+            "274": 3,
+            "275": 3,
+            "276": 3,
+            "279": 3,
             "280": 0,
-            "282": 1,
+            "282": 3,
             "283": 0,
-            "285": 1
+            "285": 3
           },
           "Branches": [
             {
@@ -42217,7 +42217,7 @@
               "EndOffset": 13,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 279,
@@ -42233,7 +42233,7 @@
               "EndOffset": 103,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 282,
@@ -42249,19 +42249,19 @@
               "EndOffset": 135,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 1
+              "Hits": 3
             }
           ]
         },
         "Microsoft.VisualStudio.TestPlatform.ObjectModel.TestOutcome Xunit.Runner.VisualStudio.VsExecutionSink::GetAggregatedTestOutcome(Xunit.Abstractions.ITestCaseFinished)": {
           "Lines": {
-            "290": 1,
+            "290": 3,
             "291": 0,
-            "292": 1,
+            "292": 3,
             "293": 0,
-            "294": 1,
+            "294": 3,
             "295": 0,
-            "297": 1
+            "297": 3
           },
           "Branches": [
             {
@@ -42278,7 +42278,7 @@
               "EndOffset": 10,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 292,
@@ -42294,7 +42294,7 @@
               "EndOffset": 21,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 294,
@@ -42310,14 +42310,14 @@
               "EndOffset": 32,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 1
+              "Hits": 3
             }
           ]
         },
         "System.Boolean Xunit.Runner.VisualStudio.VsExecutionSink::OnMessageWithTypes(Xunit.Abstractions.IMessageSinkMessage,System.Collections.Generic.HashSet`1<System.String>)": {
           "Lines": {
-            "302": 15,
-            "303": 15
+            "302": 37,
+            "303": 37
           },
           "Branches": []
         },
@@ -42365,7 +42365,7 @@
         },
         "System.Boolean Xunit.Runner.VisualStudio.TestPlatformContext::get_RequireXunitTestProperty()": {
           "Lines": {
-            "20": 2
+            "20": 4
           },
           "Branches": []
         }
@@ -42804,10 +42804,10 @@
       "Xunit.Runner.VisualStudio.TestCaseFilter": {
         "System.Boolean Xunit.Runner.VisualStudio.TestCaseFilter::MatchTestCase(Microsoft.VisualStudio.TestPlatform.ObjectModel.TestCase)": {
           "Lines": {
-            "30": 1,
+            "30": 3,
             "33": 0,
-            "35": 1,
-            "38": 1,
+            "35": 3,
+            "38": 3,
             "41": 0
           },
           "Branches": [
@@ -42825,7 +42825,7 @@
               "EndOffset": 30,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 35,
@@ -42833,7 +42833,7 @@
               "EndOffset": 38,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 35,
@@ -43862,7 +43862,7 @@
             "384": 0,
             "388": 1,
             "390": 1,
-            "391": 69,
+            "391": 75,
             "392": 1,
             "395": 0,
             "397": 0,
@@ -44046,7 +44046,7 @@
             "499": 1,
             "502": 1,
             "503": 1,
-            "504": 4,
+            "504": 6,
             "505": 1,
             "506": 1,
             "507": 2,
@@ -44068,15 +44068,15 @@
             "525": 0,
             "526": 0,
             "528": 0,
-            "532": 2,
+            "532": 4,
             "533": 1,
-            "534": 2,
-            "536": 4,
-            "538": 1,
-            "539": 1,
+            "534": 4,
+            "536": 8,
+            "538": 3,
+            "539": 3,
             "540": 0,
-            "543": 1,
-            "544": 1,
+            "543": 3,
+            "544": 3,
             "552": 0,
             "553": 0,
             "554": 0,
@@ -44109,7 +44109,7 @@
             "602": 0,
             "603": 0,
             "606": 1,
-            "608": 5,
+            "608": 11,
             "610": 1,
             "611": 1,
             "612": 0,
@@ -44267,7 +44267,7 @@
               "EndOffset": 579,
               "Path": 1,
               "Ordinal": 21,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 539,
@@ -44283,7 +44283,7 @@
               "EndOffset": 682,
               "Path": 1,
               "Ordinal": 19,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 536,
@@ -44582,10 +44582,10 @@
             "703": 16,
             "704": 14,
             "705": 2,
-            "707": 724,
-            "711": 360,
-            "712": 44124,
-            "715": 40886,
+            "707": 740,
+            "711": 368,
+            "712": 48552,
+            "715": 45022,
             "719": 24,
             "720": 12,
             "722": 0,
@@ -44593,7 +44593,7 @@
             "724": 0,
             "725": 0,
             "728": 12,
-            "730": 360,
+            "730": 368,
             "731": 0,
             "733": 0,
             "737": 2
@@ -44685,7 +44685,7 @@
               "EndOffset": 339,
               "Path": 1,
               "Ordinal": 29,
-              "Hits": 360
+              "Hits": 368
             },
             {
               "Line": 712,
@@ -44693,7 +44693,7 @@
               "EndOffset": 375,
               "Path": 1,
               "Ordinal": 27,
-              "Hits": 21702
+              "Hits": 23908
             },
             {
               "Line": 715,
@@ -44701,7 +44701,7 @@
               "EndOffset": 391,
               "Path": 0,
               "Ordinal": 10,
-              "Hits": 21702
+              "Hits": 23908
             },
             {
               "Line": 715,
@@ -44709,7 +44709,7 @@
               "EndOffset": 403,
               "Path": 0,
               "Ordinal": 12,
-              "Hits": 17794
+              "Hits": 19540
             },
             {
               "Line": 715,
@@ -44717,7 +44717,7 @@
               "EndOffset": 425,
               "Path": 0,
               "Ordinal": 14,
-              "Hits": 17792
+              "Hits": 19538
             },
             {
               "Line": 715,
@@ -44725,7 +44725,7 @@
               "EndOffset": 447,
               "Path": 0,
               "Ordinal": 16,
-              "Hits": 17790
+              "Hits": 19536
             },
             {
               "Line": 715,
@@ -44741,7 +44741,7 @@
               "EndOffset": 485,
               "Path": 1,
               "Ordinal": 19,
-              "Hits": 17790
+              "Hits": 19536
             },
             {
               "Line": 715,
@@ -44789,7 +44789,7 @@
               "EndOffset": 613,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 22062
+              "Hits": 24276
             },
             {
               "Line": 715,
@@ -44797,7 +44797,7 @@
               "EndOffset": 613,
               "Path": 1,
               "Ordinal": 13,
-              "Hits": 22062
+              "Hits": 24276
             },
             {
               "Line": 715,
@@ -44805,7 +44805,7 @@
               "EndOffset": 613,
               "Path": 1,
               "Ordinal": 15,
-              "Hits": 22062
+              "Hits": 24276
             },
             {
               "Line": 715,
@@ -44813,7 +44813,7 @@
               "EndOffset": 613,
               "Path": 1,
               "Ordinal": 17,
-              "Hits": 22062
+              "Hits": 24276
             },
             {
               "Line": 715,
@@ -44821,7 +44821,7 @@
               "EndOffset": 613,
               "Path": 1,
               "Ordinal": 21,
-              "Hits": 22062
+              "Hits": 24276
             },
             {
               "Line": 712,
@@ -44829,7 +44829,7 @@
               "EndOffset": 625,
               "Path": 0,
               "Ordinal": 26,
-              "Hits": 360
+              "Hits": 368
             },
             {
               "Line": 707,
@@ -44847,10 +44847,10 @@
             "795": 1,
             "796": 1,
             "797": 1,
-            "799": 4,
-            "801": 1,
-            "802": 1,
-            "803": 1,
+            "799": 8,
+            "801": 3,
+            "802": 3,
+            "803": 3,
             "806": 1
           },
           "Branches": [
@@ -44876,7 +44876,7 @@
               "EndOffset": 47,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 802,
@@ -44884,7 +44884,7 @@
               "EndOffset": 82,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 802,
@@ -44892,7 +44892,7 @@
               "EndOffset": 90,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 1
+              "Hits": 3
             },
             {
               "Line": 799,
@@ -44947,37 +44947,37 @@
         },
         "System.Collections.Generic.IEnumerable`1<System.String> Xunit.Runner.VisualStudio.VsTestRunner/DiscoveredTestCase::get_TraitNames()": {
           "Lines": {
-            "819": 1
+            "819": 3
           },
           "Branches": []
         },
         "Microsoft.VisualStudio.TestPlatform.ObjectModel.TestCase Xunit.Runner.VisualStudio.VsTestRunner/DiscoveredTestCase::get_VSTestCase()": {
           "Lines": {
-            "821": 3
+            "821": 9
           },
           "Branches": []
         },
         "Xunit.Abstractions.ITestCase Xunit.Runner.VisualStudio.VsTestRunner/DiscoveredTestCase::get_TestCase()": {
           "Lines": {
-            "823": 1
+            "823": 3
           },
           "Branches": []
         },
         "System.String Xunit.Runner.VisualStudio.VsTestRunner/DiscoveredTestCase::get_UniqueID()": {
           "Lines": {
-            "825": 1
+            "825": 3
           },
           "Branches": []
         },
         "System.Void Xunit.Runner.VisualStudio.VsTestRunner/DiscoveredTestCase::.ctor(System.String,Xunit.TestCaseDescriptor,Xunit.Abstractions.ITestCase,LoggerHelper,Xunit.Runner.VisualStudio.TestPlatformContext)": {
           "Lines": {
-            "827": 1,
-            "829": 1,
-            "830": 1,
-            "831": 1,
-            "832": 1,
-            "833": 1,
-            "834": 1
+            "827": 3,
+            "829": 3,
+            "830": 3,
+            "831": 3,
+            "832": 3,
+            "833": 3,
+            "834": 3
           },
           "Branches": []
         }
@@ -45038,7 +45038,7 @@
               "EndOffset": 18,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 67
+              "Hits": 73
             },
             {
               "Line": 391,

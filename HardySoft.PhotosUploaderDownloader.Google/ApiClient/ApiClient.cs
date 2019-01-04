@@ -6,7 +6,7 @@
     using System.Net;
     using System.Text;
     using System.Threading.Tasks;
-    using Abstraction.Security;
+    using Abstractions.Security;
 
     /// <summary>
     /// Supported Google Api client implementation.

@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader", "HardySoft.PhotosUploaderDownloader\HardySoft.PhotosUploaderDownloader.csproj", "{D36AE224-3DE7-4169-8B72-B6C8231B2A07}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader.Abstraction", "HardySoft.PhotosUploaderDownloader.Abstraction\HardySoft.PhotosUploaderDownloader.Abstraction.csproj", "{2D427AB9-DCE7-44D7-BD1D-88723C9DA3C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader.Abstractions", "HardySoft.PhotosUploaderDownloader.Abstractions\HardySoft.PhotosUploaderDownloader.Abstractions.csproj", "{2D427AB9-DCE7-44D7-BD1D-88723C9DA3C6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader.Google", "HardySoft.PhotosUploaderDownloader.Google\HardySoft.PhotosUploaderDownloader.Google.csproj", "{737C8C53-40FE-4264-8F39-82C5BC0769AA}"
 EndProject

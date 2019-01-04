@@ -4,8 +4,8 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using Abstraction.PhotoService;
-    using Abstraction.Security;
+    using Abstractions.PhotoService;
+    using Abstractions.Security;
     using ApiClient;
     using Newtonsoft.Json;
 

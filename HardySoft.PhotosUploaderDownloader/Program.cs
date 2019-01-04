@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.IO;
     using System.Threading.Tasks;
-    using Abstraction.PhotoService;
+    using Abstractions.PhotoService;
     using Google.ApiClient;
     using Google.PhotoService;
     using Google.Security;
