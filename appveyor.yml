@@ -38,3 +38,9 @@ dotnet_csproj:
 
 test_script:
   - dotnet test /p:CollectCoverage=true
+
+notifications:
+  - provider: Email
+    to:
+      - hardywang@outlook.com
+    on_build_status_changed: true
