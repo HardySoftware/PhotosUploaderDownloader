@@ -22,11 +22,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{D9E3C9B9-79BA-4987-85DE-32F67C484C35}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
 		HardySoft.PhotoUploaderDownloader.ruleset = HardySoft.PhotoUploaderDownloader.ruleset
 		photos-uploader-downloader.sln.DotSettings = photos-uploader-downloader.sln.DotSettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardySoft.PhotosUploaderDownloader.Imgur", "HardySoft.PhotosUploaderDownloader.Imgur\HardySoft.PhotosUploaderDownloader.Imgur.csproj", "{BDAB4E90-BFAE-44EF-ADA3-AB99883D1C6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardySoft.PhotosUploaderDownloader.Imgur", "HardySoft.PhotosUploaderDownloader.Imgur\HardySoft.PhotosUploaderDownloader.Imgur.csproj", "{BDAB4E90-BFAE-44EF-ADA3-AB99883D1C6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

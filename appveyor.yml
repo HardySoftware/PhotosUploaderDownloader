@@ -38,7 +38,7 @@ dotnet_csproj:
   informational_version: '{version}'
 
 test_script:
-  - dotnet test /p:CollectCoverage=true
+  - dotnet test /p:CollectCoverage=true /p:Exclude="[xunit.*]*"
 
 notifications:
   - provider: Email
